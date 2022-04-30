@@ -1,0 +1,1 @@
+hi! link EndOfBuffer LineNr

@@ -1,0 +1,15 @@
+*.font: xft:FiraCode Nerd Font:style=Regular:size=13
+
+! Urxvt Settings
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt*depth: 32
+! URxvt.background: [70]#000000
+URxvt*internalBorder: 22
+URxvt.letterSpace: -1
+
+urxvt.iso14755: false
+urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+urxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! vim: ft=xdefaults

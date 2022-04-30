@@ -1,0 +1,54 @@
+# Decorator
+window.active.title.bg.color: #1d2021
+window.inactive.title.bg.color: #1d2021
+window.*.label.text.color: #fbf1c7
+window.*.button.*.image.color: #d8dee8
+
+# Borders
+window.handle.width: 0
+window.client.padding.width: 0
+border.width: 0
+
+# Title
+padding.width: 12
+padding.height: 10
+window.*.title.bg: Solid Flat
+window.*.*.bg: Parentrelative
+window.label.text.justify: center
+
+# Menu
+menu.border.width: 6
+menu.separator.width: 2
+menu.separator.padding.width: 10
+menu.separator.padding.height: 2
+menu.overlap.x: -8
+menu.*.bg: flat solid
+menu.*.bg.color: #1d2021
+menu.*.color: #1d2021
+menu.title.text.color: #fbf1c7
+menu.items.text.color: #fbf1c7
+menu.items.active.disabled.text.color: #707070
+menu.items.active.text.color: #fbf1c7
+menu.title.text.justify: center
+menu.items.active.bg.color: #5294e2
+
+# OSD
+osd.border.width: 1
+osd.border.color: #2f343f
+osd.bg: flat solid
+osd.bg.color: #2f343f
+osd.label.bg: flat solid
+osd.label.bg.color: #2f343f
+osd.hilight.bg: flat solid
+osd.hilight.bg.color: #ef6b7b
+
+# Colour Trick
+window.active.button.close.unpressed.image.color: #fe564c
+window.inactive.button.close.unpressed.image.color: #fe564c
+window.active.button.iconify.unpressed.image.color: #fcb428
+window.inactive.button.iconify.unpressed.image.color: #fcb428
+window.active.button.max.unpressed.image.color: #21c136
+window.inactive.button.max.unpressed.image.color: #21c136
+window.*.button.max.*.image.color: #21c136
+
+# vim: ft=yaml

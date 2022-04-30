@@ -1,0 +1,694 @@
+;==========================================================
+;
+;   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—
+;   â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â•šâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—
+;   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘   â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•
+;   â–ˆâ–ˆâ•”â•â•â•â• â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘    â•šâ–ˆâ–ˆâ•”â•  â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—
+;   â–ˆâ–ˆâ•‘     â•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘
+;   â•šâ•â•      â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•â•â•šâ•â•   â•šâ•â•â•â•â•â• â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #202224
+background-alt = #212121
+;foreground = ${xrdb:color7:#222}
+foreground = #D5C4A1
+foreground-alt = #D5C4A1
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+[accents]
+blue = #83A598
+teal = #84DBEB
+lightblue = #B8E3EF
+light = #D5C4A1
+black = #202224
+
+[bar/polybear-top]
+;monitor = ${env:MONITOR:HDMI-1}
+bottom = false
+width = 95%
+height = 26
+offset-x = 2.5%
+;offset-y = 1%
+;radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = ${accents.black}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = i3
+;modules-center = mpd
+modules-right = alsa
+date-margin-right = 0
+
+tray-position = none
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+wm-restack = i3
+
+override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/polybear-bottom]
+;monitor = ${env:MONITOR:HDMI-1}
+bottom = true
+width = 96.4%
+height = 26
+offset-x = 1.8%
+;offset-y = 1%
+;radius = 6.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = ${accents.black}
+
+padding-left = 3
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = xwindow
+;modules-center = mpd
+modules-right = cpu wlan base date
+
+tray-position = none
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+wm-restack = i3
+
+override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/small-bear-window]
+;monitor = ${env:MONITOR:HDMI-1}
+bottom = true
+width = 14%
+height = 26
+;offset-x = 1%
+;offset-y = 1%
+;radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = ${accents.black}
+
+padding-left = 3
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = xwindow
+;modules-center = mpd
+;modules-right = cpu wlan base date
+
+tray-position = none
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+wm-restack = i3
+
+override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/small-bear-utils]
+;monitor = ${env:MONITOR:HDMI-1}
+bottom = true
+width = 20%
+height = 26
+offset-x = 80%
+;offset-y = 1%
+;radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = ${accents.black}
+
+padding-left = 3
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+;modules-left = xwindow
+;modules-center = mpd
+modules-right = cpu wlan base time
+
+tray-position = none
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+wm-restack = i3
+
+override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/xwindow]
+type = internal/xwindow
+label = "%title:0:30:...% "
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "î‰¯ "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+;pin-workspaces = true
+;inline-mode = true
+enable-click = true
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-foreground = ${accents.black}
+label-focused-background = ${accents.light}
+;label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-foreground = ${accents.teal}
+label-unfocused-background = ${accents.black}
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = <<
+icon-stop = <|>
+icon-play = >
+icon-pause = ||
+icon-next = >>
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = â”€
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = â”€
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+;format-underline = #f90000
+label = %percentage:2%%
+label-foreground = ${accents.light}
+label-background = ${accents.black}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "î€¨ "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/network]
+type = internal/network
+; Name of the network interface to display. You can get the names of the
+; interfaces on your machine with `ip link`
+; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
+interface = wlan0
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+
+; Test connectivity every Nth update
+; A value of 0 disables the feature
+; NOTE: Experimental (needs more testing)
+; Default: 0
+;ping-interval = 3
+
+; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
+; Minimum output width of upload/download rate
+; Default: 3
+udspeed-minwidth = 5
+
+; Accumulate values from all interfaces
+; when querying for up/downspeed rate
+; Default: false
+accumulate-stats = true
+
+; Consider an `UNKNOWN` interface state as up.
+; Some devices like USB network adapters have 
+; an unknown state, even when they're running
+; Default: false
+unknown-as-up = true
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = <ramp-signal><label-connected>
+;format-connected-underline = #9f78e1
+label-connected = "  %essid%  "
+label-connected-foreground = ${accents.black}
+label-connected-background = ${accents.light}
+
+;format-disconnected =
+format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+label-disconnected = "  disconnected  "
+label-disconnected-foreground = ${accents.black}
+label-disconnected-background = ${accents.light}
+
+ramp-signal-0 = " 0 "
+ramp-signal-1 = " 1 "
+ramp-signal-2 = " 2 "
+ramp-signal-3 = " 3 "
+ramp-signal-4 = " 4 "
+ramp-signal-foreground = ${accents.black}
+ramp-signal-background = ${accents.light}
+
+[module/eth]
+type = internal/network
+interface = eth0
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = "î†œ "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/time]
+type = internal/date
+interval = 20
+
+time = %I:%M %p
+
+;format-prefix = î€–
+;format-prefix-foreground = ${accents.black}
+;format-prefix-background = ${accents.teal}
+;format-underline = #0a6cf5
+
+label = " %time% "
+label-foreground = ${accents.black}
+label-background = ${accents.teal}
+
+[module/date]
+type = internal/date
+interval = 20
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %I:%M %p
+time-alt = %I:%M %p
+
+;format-prefix = î€–
+;format-prefix-foreground = ${accents.black}
+;format-prefix-background = ${accents.teal}
+;format-underline = #0a6cf5
+
+label = " %date% %time% "
+label-foreground = ${accents.black}
+label-background = ${accents.teal}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted = muted
+label-muted-foreground = ${colors.foreground-alt}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = â”€
+bar-volume-fill-font = 2
+bar-volume-empty = â”€
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = "îˆ‚ "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = â”€
+bar-volume-fill-font = 2
+bar-volume-empty = â”€
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = "îˆº "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = îˆ¶
+ramp-capacity-1 = îˆ·
+ramp-capacity-2 = îˆ¸
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = îˆ¶
+animation-charging-1 = îˆ·
+animation-charging-2 = îˆ¸
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = îˆ¸
+animation-discharging-1 = îˆ·
+animation-discharging-2 = îˆ¶
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = îƒ‰
+ramp-1 = îƒŠ
+ramp-2 = îƒ‹
+ramp-foreground = ${colors.foreground-alt}
+
+[module/brightness]
+type = custom/script
+exec = brightness
+interval = 1
+
+format = <label>
+format-prefix ="BR: "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.foreground}
+label = %output%
+format-foreground = ${colors.background}
+format-background = ${colors.foreground}
+format-padding = 1
+
+[module/base]
+type = custom/text
+
+content = comfy@coffeeshop
+content-foreground = ${accents.blue}
+content-background = ${accents.black}
+
+[module/powermenu]
+type = custom/menu
+label-foreground = ${accents.black}
+label-background = ${accents.teal}
+
+expand-right = true
+
+format-spacing = 0
+
+label-open = " # "
+label-open-foreground = ${self.label-foreground}
+label-open-background = ${self.label-background}
+label-close = " cancel "
+label-close-foreground = ${self.label-foreground}
+label-close-background = ${self.label-background}
+label-separator = |
+label-separator-foreground = ${self.label-foreground}
+label-separator-background = ${self.label-background}
+
+menu-0-0 = " launch "
+menu-0-0-exec = menu-open-1
+menu-0-0-foreground = ${self.label-foreground}
+menu-0-0-background = ${self.label-background}
+menu-0-1 = " power off "
+menu-0-1-exec = menu-open-2
+menu-0-1-foreground = ${self.label-foreground}
+menu-0-1-background = ${self.label-background}
+
+menu-1-0 = " back "
+menu-1-0-exec = menu-open-0
+menu-1-0-foreground = ${self.label-foreground}
+menu-1-0-background = ${self.label-background}
+menu-1-1 = " terminal "
+menu-1-1-exec = terminator
+menu-1-1-foreground = ${self.label-foreground}
+menu-1-1-background = ${self.label-background}
+menu-1-2 = " firefox "
+menu-1-2-exec = firefox
+menu-1-2-foreground = ${self.label-foreground}
+menu-1-2-background = ${self.label-background}
+
+menu-2-0 = " back "
+menu-2-0-exec = menu-open-0
+menu-2-0-foreground = ${self.label-foreground}
+menu-2-0-background = ${self.label-background}
+menu-2-1 = " power off "
+menu-2-1-exec = sudo poweroff
+menu-2-1-foreground = ${self.label-foreground}
+menu-2-1-background = ${self.label-background}
+
+[module/seppa]
+type = custom/text
+padding-left = 0
+padding-right = 0
+;content = "î‚²"
+content = "<<"
+
+[module/seppa_blackonlight]
+inherit = module/seppa
+
+content-foreground = ${accents.black}
+content-background = ${accents.light}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

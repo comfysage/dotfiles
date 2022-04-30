@@ -1,0 +1,6 @@
+
+super + Return
+ alacritty
+
+super + shift + r
+ openbox --reconfigure

@@ -1,0 +1,24 @@
+
+! Gruvbox
+*.foreground: #fbf1c7
+*.background: #1d2021
+*.cursorColor: #f28534
+
+*.color0: #1d2021
+*.color8: #555148
+*.color1: #f2594b
+*.color9: #ea6962
+*.color2: #b0b846
+*.color10: #a9b665
+*.color3: #fabd2f
+*.color11: #f28534
+*.color4: #80aa9e
+*.color12: #7daea3
+*.color5: #d3869b
+*.color13: #D6949E
+*.color6: #8bba7f
+*.color14: #89b482
+*.color7: #c6b396
+*.color15: #e2cca9
+
+! vim: ft=xdefaults

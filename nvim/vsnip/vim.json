@@ -1,0 +1,12 @@
+{
+  "VimPlugin": {
+    "prefix": "viplug",
+    "body": [
+      "$LINE_COMMENT $TM_FILENAME {{{",
+      "$LINE_COMMENT @plug $TM_FILENAME",
+      "$LINE_COMMENT @description $1",
+      "$LINE_COMMENT }}}"
+    ],
+    "description": "New Plugin File"
+  }
+}

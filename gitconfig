@@ -1,0 +1,22 @@
+[core]
+	editor = nvim
+[user]
+	email = 67917529+CrispyBaccoon@users.noreply.github.com
+	name = CrispyBaccoon
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[alias]
+	uncommit = reset HEAD~1
+ hop = checkout -b
+[init]
+	defaultBranch = mega
+[safe]
+	directory = /mnt/d/home/kitchen/pan/gruvbox
+	directory = /mnt/d/home/kitchen/config
+	directory = /mnt/d/home/kitchen/pan/stew
+	directory = /mnt/d/home/kitchen/pan/fantastic.vim

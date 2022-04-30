@@ -1,0 +1,9 @@
+{
+  "LuaRequire": {
+    "prefix": "req",
+    "body": [
+      "require '${1:lua}'$2"
+    ],
+    "description": "Require Statement"
+  }
+}

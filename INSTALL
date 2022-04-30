@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# git clone https://github.com/crispybaccoon/dotfiles.git ~/.stew
+git clone https://github.com/crispybaccoon/stew.git ~/.stew
+PATH=$PATH:$HOME/.stew
+
+/mnt/d/bin/update_nvim
+
+# YAY
+cd ~
+sudo pacman -S base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# Packages
+cd ~
+packages=(
+ # main
+ xorg
+ # dev
+ node
+ npm
+ # UI
+ alacritty
+ bspwm
+ openbox
+ feh
+ # application
+ ranger
+ )
+
+yay -S ${packages[@]}

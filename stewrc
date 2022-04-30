@@ -1,0 +1,33 @@
+{
+ "main": { "stewpath": "/mnt/d/home/kitchen/config", "git": false },
+ "module": {
+  "stewrc": ["/home/comfy/.config/stew/stewrc"],
+  "alacritty": ["/home/comfy/.config/alacritty"],
+  "awesome": ["/home/comfy/.config/awesome"],
+  "bspwm": ["/home/comfy/.config/bspwm"],
+  "cava": ["/home/comfy/.config/cava"],
+  "dunst": ["/home/comfy/.config/dunst"],
+  "fzf": ["/home/comfy/.config/fzf"],
+  "htop": ["/home/comfy/.config/htop"],
+  "i3": ["/home/comfy/.config/i3"],
+  "moc": ["/home/comfy/.moc"],
+  "mpd/playlists": ["/home/comfy/.config/mpd/playlists"],
+  "mpd/mpd.conf": ["/home/comfy/.config/mpd/mpd.conf"],
+  "ncmpcpp": ["/home/comfy/.config/ncmpcpp"],
+  "neofetch": ["/home/comfy/.config/neofetch"],
+  "nvim": ["/home/comfy/.config/nvim"],
+  "openbox": ["/home/comfy/.config/openbox"],
+  "picom": ["/home/comfy/.config/picom"],
+  "polybar": ["/home/comfy/.config/polybar"],
+  "ranger": ["/home/comfy/.config/ranger"],
+  "rofi": ["/home/comfy/.config/rofi"],
+  "sxhkd": ["/home/comfy/.config/sxhkd"],
+  "themes": ["/home/comfy/.themes"],
+  "tmux-plugins": ["/home/comfy/.tmux/plugins"],
+  "X11": ["/home/comfy/.config/X11"],
+  "gitconfig": ["/home/comfy/.gitconfig"],
+  "tmux.conf": ["/home/comfy/.tmux.conf"],
+  "zshrc": ["/home/comfy/.zshrc"],
+  "zsh_history": [".zsh_history"]
+ }
+}

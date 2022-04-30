@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+/mnt/d/bin/sxhkdlaunch &
+
+/mnt/d/bin/xrdbload
+xsetroot -cursor_name left_ptr
+[[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap
+
+session=${1:bspwm}
+
+case $session in
+	i3|i3wm  )  exec i3 ;;
+	bsp|bspwm  )  exec bspwm ;;
+  openbox )  exec openbox-session ;;
+	awesome|awesomewm  )  exec awesome ;;
+	*  )  exec $1 ;;
+esac
+
+exec bspwm

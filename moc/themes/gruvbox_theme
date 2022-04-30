@@ -1,0 +1,49 @@
+
+# # main
+background            = black  	default
+frame			            = black		default
+window_title          = cyan		default
+
+# # directory
+directory		          = red 		default
+selected_directory    = yellow	default
+# # playlist
+playlist		          = blue		default
+selected_playlist	    = magenta	default
+# # file
+file			            = cyan		default
+selected_file		      = green		default
+# # marked file
+marked_file		        = yellow	default
+marked_selected_file	= green		default
+
+# # bar
+info			            = cyan		default
+status            		= magenta	default
+title	              	= cyan		default
+state	              	= magenta	default
+# # time
+current_time      		= magenta	default
+time_left		          = cyan		default
+total_time	        	= cyan		default
+time_total_frames	    = magenta	default
+plist_time          	= magenta	default
+sound_parameters	    = cyan		default
+
+# # progress-bar
+empty_mixer_bar	      = cyan		default
+filled_mixer_bar      = black		green
+empty_time_bar	      = cyan		default
+filled_time_bar	      = black		green
+# # entry
+entry		            	= yellow	default
+entry_title          	= red	   	default
+
+# # ...
+legend	            	= magenta	default
+disabled            	= black		default
+enabled	            	= yellow	default
+
+# # mocp interaction
+error			            = red	   	default
+message		            = yellow	default
