@@ -1,13 +1,11 @@
 
-lua require('comfy.color')
-
-lua require('plenary.reload').reload_module('comfy.color')
+lua R('comfy.color')
 
 " colorscheme fantastic-cterm
 
 lua << EOF
 
-local color = require 'comfy.color'
+local color = R 'comfy.color'
 
 color.loadScheme 'gruvbox'
 -- color.loadTheme 'nocursorline'
