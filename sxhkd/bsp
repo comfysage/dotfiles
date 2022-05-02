@@ -43,6 +43,9 @@ super + w
 super + shift + z
  /mnt/d/bin/toggle_polybar
 
+super + z
+ /mnt/d/bin/toggle_zen
+
 #
 # state/flags
 #
