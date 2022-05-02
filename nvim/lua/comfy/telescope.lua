@@ -71,7 +71,7 @@ end
 function M.explorer(props)
   local opts = M.IvyTheme {
     -- border = true,
-    -- previewer = false,
+    preview = true,
     shorten_path = true,
     hidden = true,
     prompt_title = '',
