@@ -110,7 +110,7 @@ end
 
 function M.edit_notes()
   require('comfy.telescope').explorer({
-    cwd = '~/Dropbox/notes/',
+    cwd = '/mnt/d/home/kitchen/Dropbox/notes/',
   })
 end
 
