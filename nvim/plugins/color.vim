@@ -1,17 +1,18 @@
 
 lua R('comfy.color')
 
-" colorscheme fantastic-cterm
+colorscheme Base2Tone_ForestDark
 
 lua << EOF
 
 local color = R 'comfy.color'
 
-color.loadScheme 'gruvbox'
+color.loadScheme 'DuoTone'
 -- color.loadTheme 'nocursorline'
+-- color.loadTheme 'transparent'
 color.loadTheme 'link'
-color.loadTheme 'transparent'
 
 EOF
 
 " set termguicolors&
+
