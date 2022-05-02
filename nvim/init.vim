@@ -424,15 +424,15 @@ nmap <silent> <space>l :wincmd l<CR>
 " Terminal {{{
 
 tnoremap <Esc> <C-\><C-n>
-tmap <silent> <C-Left> :wincmd h<CR>
-tmap <silent> <C-Down> :wincmd j<CR>
-tmap <silent> <C-Up> :wincmd k<CR>
-tmap <silent> <C-Right> :wincmd l<CR>
+" tmap <silent> <C-Left>  <Cmd>wincmd h<CR>
+" tmap <silent> <C-Down>  <Cmd>wincmd j<CR>
+" tmap <silent> <C-Up>    <Cmd>wincmd k<CR>
+" tmap <silent> <C-Right> <Cmd>wincmd l<CR>
 
-tmap <silent> <C-h> :wincmd h<CR>
-tmap <silent> <C-j> :wincmd j<CR>
-tmap <silent> <C-k> :wincmd k<CR>
-tmap <silent> <C-l> :wincmd l<CR>
+" tmap <silent> <C-h> :wincmd h<CR>
+" tmap <silent> <C-j> :wincmd j<CR>
+" tmap <silent> <C-k> :wincmd k<CR>
+" tmap <silent> <C-l> :wincmd l<CR>
 
 " }}}
 
