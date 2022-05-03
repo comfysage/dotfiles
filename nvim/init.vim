@@ -104,6 +104,7 @@ let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_cursor = 'auto'
 let g:gruvbox_material_current_word = 'grey background'
+let g:gruvbox_material_transparent_background = 1
 
 "}}}
 
@@ -112,6 +113,7 @@ let g:gruvbox_material_current_word = 'grey background'
 let g:edge_style = 'aura'
 let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 1
+let g:edge_transparent_background = 1
 
 " }}}
 
@@ -120,6 +122,7 @@ let g:edge_disable_italic_comment = 1
 let g:everforest_background = 'hard'
 let g:everforest_enable_italic = 1
 let g:everforest_disable_italic_comment = 1
+let g:everforest_transparent_background = 1
 
 " }}}
 
