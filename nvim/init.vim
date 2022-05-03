@@ -226,7 +226,7 @@ set smartindent
 
 " Tab indention
 set tabstop=1 softtabstop=1
-set shiftwidth=1
+set shiftwidth=2
 set expandtab
 
 " Lifecycle
