@@ -487,7 +487,7 @@ let g:NERDTreeSortOrder = ['\/$', '\.*', '*', '\.swp$', '\.bak$', '\~$']
 
 " NERDTree Git
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'*',
+                \ 'Modified'  :'M',
                 \ 'Staged'    :'+',
                 \ 'Untracked' :'_',
                 \ 'Renamed'   :'/',
@@ -495,7 +495,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Deleted'   :'-',
                 \ 'Dirty'     :'*',
                 \ 'Ignored'   :'#',
-                \ 'Clean'     :'.',
+                \ 'Clean'     :' ',
                 \ 'Unknown'   :'?',
                 \ }
 
