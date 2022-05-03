@@ -4,21 +4,21 @@ lua << EOF
 local color = R 'comfy.color'
 
 local schemes = {
-"Base2Tone_LavenderDark",
-"Base2Tone_EveningDark",
-"Base2Tone_EarthDark",
-"Base2Tone_ForestDark",
-"Base2Tone_DesertDark",
-"Base2Tone_PorchDark",
-"Base2Tone_PoolDark",
-"Base2Tone_CaveDark",
-"Base2Tone_GardenDark",
+"Lavender", -- light cyan & white
+"Evening", -- light cyan & yellow
+"Earth", -- Brown & Yellow
+"Forest", -- Green & Lime
+"Desert", -- Green & Orange
+"Porch", -- Purple & Yellow
+"Pool", -- Purple & Orange ( lighter than Porch )
+"Cave", -- red & yellow
+"Garden", -- green & yellow
  }
 
 local scheme = schemes[math.floor( math.random() * table.getn( schemes ) )]
+scheme = 'Base2Tone_' .. scheme .. 'Dark'
 
 vim.cmd('colorscheme ' .. scheme)
+vim.notify('colorscheme: ' .. scheme)
 
 EOF
-
-set termguicolors
