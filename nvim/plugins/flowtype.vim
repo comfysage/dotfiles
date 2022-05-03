@@ -46,17 +46,19 @@ nnoremap <silent> ,b viwc****<ESC>hPw
 
 " HighlightGroups {{{
 
-hi markdownBold guifg=#dcdadb
-hi markdownItalic guifg=#bdae93
+" hi markdownBold guifg=#dcdadb
+" hi link markdownBoldDelimiter markdownBold
+" hi markdownItalic guifg=#bdae93
+" hi link markdownItalicDelimiter markdownItalic
 
-hi markdownHeadingDelimiter guifg=#c8a0b2
-hi markdownH1 guifg=#fb4934
-hi markdownH2 guifg=#b8bb26
-hi markdownH3 guifg=#fabd2f
+" hi markdownHeadingDelimiter guifg=#c8a0b2
+" hi markdownH1 guifg=#fb4934
+" hi markdownH2 guifg=#b8bb26
+" hi markdownH3 guifg=#fabd2f
 
-hi markdownUrl guifg=#d3869b
-hi markdownLinkDelimiter guifg=#bdae93
-hi markdownLinkText guifg=#a293a4
-hi markdownListMarker guifg=#928374
+" hi markdownUrl guifg=#d3869b
+" hi markdownLinkDelimiter guifg=#bdae93
+" hi markdownLinkText guifg=#a293a4
+" hi markdownListMarker guifg=#928374
 
 " }}}
