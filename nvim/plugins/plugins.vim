@@ -9,7 +9,7 @@ Plug 'rbgrouleff/bclose.vim' "ranger.vim needs it
 Plug 'jiangmiao/auto-pairs' "auto brackets
 Plug 'antonk52/vim-tabber' 
 
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'cocopon/pgmnt.vim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'ap/vim-css-color'
@@ -78,5 +78,7 @@ Plug 'mhartington/oceanic-next'
 " Plug 'andreypopp/vim-colors-plain'
 Plug 'crispybaccoon/pascal.vim'
 Plug 'atelierbram/Base2Tone-vim'
+Plug 'pwntester/nautilus.nvim'
+Plug 'folke/tokyonight.nvim'
 
 call plug#end()
