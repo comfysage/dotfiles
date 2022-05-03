@@ -68,7 +68,7 @@ endif
 set foldcolumn=0
 set laststatus=3
 
-source ~/.config/nvim/scripts/folds.vim
+source /mnt/d/home/kitchen/config/nvim/scripts/folds.vim
 
 set fillchars=fold:-,fold:-,foldclose:>
 
