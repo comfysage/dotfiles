@@ -354,7 +354,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " StatusLine {{{
 
 " source /mnt/d/home/kitchen/config/nvim/themes/StatusLine.vim
-lua require'soil'
+lua R'soil'
 
 " }}}
 
