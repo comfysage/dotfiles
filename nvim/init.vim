@@ -506,6 +506,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 vmap ( S(
 vmap { S{
 vmap [ S[
+vmap " S"
+vmap ' S'
 
 " }}}
 
