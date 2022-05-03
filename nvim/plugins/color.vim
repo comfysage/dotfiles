@@ -1,13 +1,13 @@
 
 lua R('comfy.color')
 
-colorscheme Base2Tone_ForestDark
+" colorscheme tokyonight
 
 lua << EOF
 
 local color = R 'comfy.color'
 
-color.loadScheme 'DuoTone'
+color.loadScheme 'fantastic'
 -- color.loadTheme 'nocursorline'
 -- color.loadTheme 'transparent'
 color.loadTheme 'link'
