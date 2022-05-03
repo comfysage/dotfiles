@@ -372,12 +372,17 @@ let g:startify_bookmarks = [ {'p': '/mnt/d/home/kitchen/pan'}, {'k': '/mnt/d/hom
 " Dashboard {{{
 
 let g:dashboard_default_executive = 'telescope'
-" let g:dashboard_custom_section = {
-"       \ 'buffer_list': {
-"         \ 'description': [ ' Recent Files' ],
-"         \ 'command': 'buffer'
-"         \}
-"       \}
+let g:dashboard_custom_section = {
+      \ 'config': {
+        \ 'description': [ 'config' ],
+        \ 'command': ':e /mnt/d/home/kitchen/config/nvim/'
+        \}
+      \}
+
+augroup Dashboard
+ " autocmd FileType dashboard setlocal showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+ autocmd FileType dashboard nnoremap e <Cmd>DashboardNewFile<CR>
+augroup END
 
 " }}}
 
