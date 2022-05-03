@@ -11,14 +11,12 @@ Plug 'antonk52/vim-tabber'
 
 " Plug 'vim-airline/vim-airline'
 Plug 'cocopon/pgmnt.vim'
-" Plug 'mhinz/vim-startify'
 Plug 'glepnir/dashboard-nvim'
 Plug 'ap/vim-css-color'
 
 " IDE
 Plug 'mattn/emmet-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -66,9 +64,6 @@ Plug 'onsails/lspkind-nvim'
 " LuaSnip
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
-
-"VimWiki
-" Plug 'vimwiki/vimwiki'
 
 "Colorschemes:
 Plug 'flazz/vim-colorschemes'
