@@ -46,15 +46,15 @@ nvim_lsp.vuels.setup {
   on_attach = on_attach,
   cmd = {'/home/comfy/.local/share/nvim/lsp_servers/remark_ls/node_modules/.bin/remark-language-server'}
 } ]]
-nvim_lsp.vimls.setup {
+--[[ nvim_lsp.vimls.setup {
  on_attach = on_attach,
  cmd = { lspservers .. '/vim/node_modules/vim-language-server/bin/index.js' },
  filetypes = { "vim" }
-}
+} ]]
 nvim_lsp.perlnavigator.setup {
  on_attach = on_attach,
  cmd = { lspservers .. '/perlnavigator/node_modules/perlnavigator-server/out/server.js' },
- filetypes = { "vim" }
+ filetypes = { "perl" }
 }
 --[[ nvim_lsp.tailwindcss.setup{
   on_attach = on_attach,
