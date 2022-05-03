@@ -183,14 +183,16 @@ source /mnt/d/home/kitchen/config/nvim/plugins/color.vim
 
 command! Highlights source $VIMRUNTIME/syntax/hitest.vim
 
-function! <SID>SynStack()
+function! SynStack()
   if !exists("*synstack")
     return
   endif
-  echo map(synstack(line("."), col(".")), 'synIDattr(v:val, "name")')
+  let s:val = map(synstack(line("."), col(".")), 'synIDattr(v:val, "name")')
+  echo s:val 
+  echo " > " .. synIDattr(synIDtrans(hlID(s:val[len(s:val) - 1])), "name")
 endfunc
 
-nmap <leader>sp :call <SID>SynStack()<CR>
+nmap <leader>sp :call SynStack()<CR>
 
 " }}}
 
