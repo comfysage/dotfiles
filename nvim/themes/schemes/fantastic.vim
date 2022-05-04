@@ -1,4 +1,7 @@
-so /mnt/d/home/kitchen/pan/fantastic.vim/colors/fantastic.vim
+
+colorscheme fantastic
+
+let g:airline_theme = 'fantastic'
 
 " hi Normal guibg=NONE
 " hi EndOfBuffer guibg=NONE
