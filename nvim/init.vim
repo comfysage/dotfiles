@@ -22,7 +22,7 @@ lua require('comfy.init')
 
 lua require('comfy.globals')
 
-source /mnt/d/home/kitchen/config/nvim/plugins/lua.vim
+lua R('comfy.plugins').plugin('lua')
 
 augroup Telescope 
  autocmd User TelescopePreviewerLoaded setlocal wrap
