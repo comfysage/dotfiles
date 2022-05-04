@@ -187,7 +187,6 @@ nmap <leader>sp :call SynStack()<CR>
 syntax on
 set encoding=UTF-8
 set spelllang=en_gb,fr
-source /mnt/d/home/kitchen/config/nvim/plugins/flowtype.vim
 set mouse=nv
 
 " Settings {{{

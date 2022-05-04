@@ -12,5 +12,6 @@ plugins.plugin 'completion'
 plugins.plugin 'commentary'
 
 plugins.plugin 'color'
+plugins.plugin 'flowtype'
 
 EOF
