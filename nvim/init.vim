@@ -166,7 +166,7 @@ let null = {
 
 " Themes {{{
 
-set runtimepath+=,/mnt/d/home/kitchen/pan/fantastic.vim/
+" set runtimepath+=,/mnt/d/home/kitchen/pan/fantastic.vim/
 source /mnt/d/home/kitchen/config/nvim/plugins/color.vim
 
 " }}}
