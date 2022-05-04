@@ -157,13 +157,6 @@ let null = {
 
 " }}}
 
-" Themes {{{
-
-" set runtimepath+=,/mnt/d/home/kitchen/pan/fantastic.vim/
-source /mnt/d/home/kitchen/config/nvim/plugins/color.vim
-
-" }}}
-
 " Colour Highlights {{{
 
 "hi! Normal guibg=#292c35

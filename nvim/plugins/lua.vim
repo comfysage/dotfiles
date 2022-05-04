@@ -11,4 +11,6 @@ plugins.plugin 'luasnip'
 plugins.plugin 'completion'
 plugins.plugin 'commentary'
 
+plugins.plugin 'color'
+
 EOF
