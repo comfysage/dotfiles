@@ -5,7 +5,7 @@ set runtimepath+=,/mnt/d/home/kitchen/config/nvim
 nmap <silent> <leader>r :source /mnt/d/home/kitchen/config/nvim/init.vim<CR>
 nmap <silent> <leader>v :e /mnt/d/home/kitchen/config/nvim/init.vim<CR>
 
-nmap <silent> <leader>s :source %<CR>
+nnoremap <silent> <leader>s <Cmd>source %<CR>
 nmap <silent> <C-s> :w<CR>
 
 " }}}
