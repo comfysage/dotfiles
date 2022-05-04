@@ -22,18 +22,11 @@ lua require('comfy.init')
 
 lua require('comfy.globals')
 
-source /mnt/d/home/kitchen/config/nvim/plugins/telescope.vim
+source /mnt/d/home/kitchen/config/nvim/plugins/lua.vim
 
 augroup Telescope 
  autocmd User TelescopePreviewerLoaded setlocal wrap
 augroup END
-
-source /mnt/d/home/kitchen/config/nvim/plugins/nvim-treesitter.vim
-source /mnt/d/home/kitchen/config/nvim/plugins/lspconfig.vim
-" source /mnt/d/home/kitchen/config/nvim/plugins/lspsaga.vim
-source /mnt/d/home/kitchen/config/nvim/plugins/luasnip.vim
-source /mnt/d/home/kitchen/config/nvim/plugins/completion.vim
-source /mnt/d/home/kitchen/config/nvim/plugins/commentary.vim
 
 lua <<EOF
 
