@@ -10,7 +10,7 @@ Plug 'jiangmiao/auto-pairs' "auto brackets
 Plug 'antonk52/vim-tabber' 
 
 Plug 'vim-airline/vim-airline'
-Plug 'cocopon/pgmnt.vim'
+" Plug 'cocopon/pgmnt.vim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'ap/vim-css-color'
 
@@ -66,15 +66,15 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
 "Colorschemes:
-Plug 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
-Plug 'sainnhe/edge'
+" Plug 'sainnhe/edge'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'joshdick/onedark.vim'
 Plug 'cocopon/iceberg.vim'
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
 " Plug 'andreypopp/vim-colors-plain'
 Plug 'crispybaccoon/fantastic.vim'
 Plug 'atelierbram/Base2Tone-vim'
