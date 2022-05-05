@@ -182,6 +182,12 @@ nmap <leader>sp :call SynStack()<CR>
 
 " }}}
 
+" Theme {{{
+
+lua R('comfy.plugins').plugin 'color'
+
+" }}}
+
 " General Settings {{{
 
 syntax on
