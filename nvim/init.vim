@@ -302,7 +302,6 @@ set foldenable
 set foldlevelstart=0
 set foldnestmax=10
 set foldmethod=marker
-nnoremap <space><ESC> za 
 
 " }}}
 
@@ -349,6 +348,7 @@ lua R'soil'
 
 " Toggle StatusLine
 command! -nargs=0 ToggleStatusLine if &ls == 0 | set ls=3 | else | set ls=0 | endif
+nnoremap <space><ESC> <Cmd>ToggleStatusLine<CR>
 
 " }}}
 
