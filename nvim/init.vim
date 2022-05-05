@@ -347,6 +347,9 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " source /mnt/d/home/kitchen/config/nvim/themes/StatusLine.vim
 lua R'soil'
 
+" Toggle StatusLine
+command! -nargs=0 ToggleStatusLine if &ls == 0 | set ls=3 | else | set ls=0 | endif
+
 " }}}
 
 " Startify {{{
