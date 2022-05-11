@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# get stew
+echo "> INSTALLING STEW <"
+git clone https://github.com/crispybaccoon/stew.git ~/stew &&\
+cd ~/stew &&\
+make
+
+# get dotfiles
+echo "> CLONING DOTFILES <"
+git clone https://github.com/crispybaccoon/dotfiles.git ~/.stew
+
+# setup stewrc
+mkdir -p ~/.config/stew
+ln -s ~/.stew/stewrc ~/.config/stew/
+
+# CALL STEW #
+echo "> LINKING DOTFILES <"
+stew setup
