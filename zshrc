@@ -149,6 +149,8 @@ alias ff='$EDITOR "$(\ls -a | fzf)"'
 
 alias lolcat='lolcat -p 16.0'
 alias llc='lolcat -S 72'
+alias leaf="${KITCHEN}/pan/leaffetch/leaffetch --config none --colors 1 5 1 2 1 3 --ascii_distro macos"
+alias leaffetchw="fetchw '${KITCHEN}/pan/leaffetch/leaffetch' '--config none --colors 1 5 1 2 1 3 --ascii_distro macos'"
 
 # Screensaver
 alias matrix='cmatrix -u 6'
