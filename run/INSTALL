@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+mkdir -p ~/.local/bin/
+
+curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/DOT -o ~/.local/bin/dot && sh ~/.local/bin/DOT
+
+curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/coffee -o ~/.local/bin/coffee
+curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/COFFEE.run.sh -o ~/.local/bin/coffee.run.sh && sh ~/.local/bin/coffee.run.sh
+
 # YAY
 cd ~
 sudo pacman -S base-devel
