@@ -1,7 +1,7 @@
 {
  "main": { "stewpath": "/mnt/d/home/kitchen/config", "git": false },
  "module": {
-  "stewrc": ["~/.config/stew/stewrc"],
+  "stewrc": ["~/.stewrc"],
   "alacritty": ["~/.config/alacritty"],
   "awesome": ["~/.config/awesome"],
   "bspwm": ["~/.config/bspwm"],
