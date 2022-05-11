@@ -127,7 +127,7 @@ schemes:
       magenta: "#D468A6"
       cyan: "#76A09A"
       white: "#a29884"
-  fantastic: &fantastic
+  mystic: &mystic
     primary:
       background: "#202330"
       foreground: "#dbcca3"
