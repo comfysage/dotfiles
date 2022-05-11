@@ -82,9 +82,12 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
+# Environment
+export TERM="xterm-256color"
 export LANG=en_CA.UTF-8
 export LC_ALL="C"
+
+export player="mpd"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
