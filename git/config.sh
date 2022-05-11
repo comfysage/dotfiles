@@ -1,5 +1,6 @@
 
 alias _status='git status --short'
+alias status='git status -s -b'
 alias _log='PAGER=less git log --oneline --graph'
 
 alias _commit='git commit' # normal commit
