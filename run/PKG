@@ -12,6 +12,7 @@ cd
 packages=(
  # main
  xorg
+ zsh-git
  # dev
  node
  npm
