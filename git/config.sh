@@ -1,6 +1,6 @@
 
 alias _status='git status --short'
-alias _log='PAGER=less _log git log --oneline --graph'
+alias _log='PAGER=less git log --oneline --graph'
 
 alias _commit='git commit' # normal commit
 alias _amend='git commit --amend' # normal commit but amend to last commit.
