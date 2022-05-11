@@ -5,7 +5,7 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:/mnt/d/bin:/home/linuxbrew
 export ZSH="/home/comfy/.oh-my-zsh"
 export ZSH_CUSTOM="/mnt/d/home/kitchen/config/omz-custom"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="gruvbox"
 ZSH_THEME_FILE="$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme"
 
 # ZSH config
