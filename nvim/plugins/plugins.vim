@@ -19,9 +19,9 @@ Plug 'mattn/emmet-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " NERDTree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons' " NERDTree Icons
+" Plug 'scrooloose/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'ryanoasis/vim-devicons' " NERDTree Icons
 Plug 'kyazdani42/nvim-web-devicons' " Icons for Telescope
 
 Plug 'pangloss/vim-javascript'
