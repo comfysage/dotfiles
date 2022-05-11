@@ -7,28 +7,4 @@ curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/DOT -o
 curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/coffee -o ~/.local/bin/coffee
 curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/COFFEE.run.sh -o ~/.local/bin/coffee.run.sh && sh ~/.local/bin/coffee.run.sh
 
-# YAY
-cd ~
-sudo pacman -S base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-# Packages
-cd ~
-packages=(
- # main
- xorg
- # dev
- node
- npm
- # UI
- alacritty
- bspwm
- openbox
- feh
- # application
- ranger
- )
-
-yay -S ${packages[@]}
+curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/PKG -o ~/.local/bin/pkg && sh ~/.local/bin/PKG

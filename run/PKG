@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# YAY
+cd ~
+sudo pacman -S base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# Packages
+cd ~
+packages=(
+ # main
+ xorg
+ # dev
+ node
+ npm
+ # UI
+ alacritty
+ bspwm
+ openbox
+ feh
+ # application
+ ranger
+ )
+
+yay -S ${packages[@]}
