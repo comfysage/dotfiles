@@ -19,6 +19,8 @@ case $session in
 	i3|i3wm  )  exec i3 ;;
 	bsp|bspwm  )  exec bspwm ;;
   openbox )  exec openbox-session ;;
+  bspwm-gnome ) exec gnome-session-bspwm ;;
+  gnome )  exec gnome-session ;;
 	awesome|awesomewm  )  exec awesome ;;
 	*  )  exec $1 ;;
 esac
