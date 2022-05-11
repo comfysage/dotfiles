@@ -1,0 +1,62 @@
+#!/usr/bin/env perl
+use strict;
+# use warnings;
+
+## Getting the OS distro
+
+open(FH, '<', '/etc/os-release') or die $!;
+
+my $os = "";
+
+while(<FH>) {
+ if ($_ =~ /^NAME=".*"$/) {
+  ( $os ) = $_ =~ /(".*")/;
+  ( $os ) = $os =~ /([^"].*[^"])/;
+  close(FH);
+ }
+}
+
+## Parsing cmdline args
+
+my @pkgs = @ARGV[1..$#ARGV];
+
+my $base = {
+ "Arch Linux" => "yay",
+ "Ubuntu" => "sudo apt",
+}->{$os} || "echo";
+
+my $cmd = {
+ "add" => {
+  "Arch Linux" => "-S",
+  "Ubuntu" => "install",
+ }->{$os},
+ "search" => {
+   "Arch Linux" => "-Ss",
+   "Ubuntu" => "search",
+  }->{$os},
+  "info" => {
+   "Arch Linux" => "-Si",
+   "Ubuntu" => "show",
+  }->{$os},
+  "run" => {
+   "vim-plug" => 'sh -c \'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim\'',
+   "omz" => 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
+   "cbonsai" => 'cd ~/ ; git clone --depth 1 https://gitlab.com/jallbrit/cbonsai.git && cd ~/cbonsai && sudo make install',
+   "nvim" => 'curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o ~/nvim.appimage && chmod +x ~/nvim.appimage && sudo mv ~/nvim.appimage /usr/local/bin/nvim',
+  }->{$pkgs[0]},
+}->{$ARGV[0]} || "";
+
+my $optionstr = {
+  "Arch Linux" => "--color always",
+  "Ubuntu" => "",
+ }->{$os} || "";
+
+my @options = split( / /, $optionstr );
+
+## Running the command
+if ($ARGV[0] =~ /(run)|(Run)/) {
+ system($cmd);
+} else {
+ system($base, $cmd, @options, @pkgs);
+}
+
