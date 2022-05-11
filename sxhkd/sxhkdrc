@@ -27,4 +27,4 @@ XF86AudioPrev
 super + i
   systemsettings
 
-# vim: filetype=yaml
+# vim: filetype=bash
