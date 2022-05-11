@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-./coffee run vim-plug
-./coffee run omz
-./coffee run cbonsai
-./coffee run nvim
+~/.local/bin/coffee run vim-plug
+~/.local/bin/coffee run omz
+~/.local/bin/coffee run cbonsai
+~/.local/bin/coffee run nvim
