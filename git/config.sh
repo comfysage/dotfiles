@@ -2,6 +2,7 @@
 alias _status='git status --short'
 alias status='git status -s -b'
 alias _log='PAGER=less git log --oneline --graph'
+alias ahead='git log --oneline @{u}..HEAD | grep -cE ".*"'
 
 alias _commit='git commit' # normal commit
 alias _amend='git commit --amend' # normal commit but amend to last commit.
