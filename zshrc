@@ -96,8 +96,8 @@ if [[ -n $SSH_CONNECTION ]]; then
   export MANPAGER=$PAGER
 else
   export EDITOR='nvim'
-  export PAGER='nvim +Man!'
-  export MANPAGER=$PAGER
+  export PAGER='less'
+  export MANPAGER='nvim +Man!'
 fi
 
 export VISERVER="/tmp/vi.pipe"
