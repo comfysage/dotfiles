@@ -70,7 +70,7 @@ ignition=${PREFIXS[2]}
 # PROMPT='{ _ %{$fg[$NCOLOR]%}%B%n%b%{$reset_color%} _ : _ %{$fg[red]%}%30<...<%~%<<%{$reset_color} _ }%(!.#.$)'
 # PROMPT=$(echo "" '\033[38;5;11m%30<...<%~%<<%{${NONE}$reset_color $(git_prompt_info)%{$fg[$NCOLOR]%}%(!.#.$)%{$reset_color%} ' )
 # PROMPT=$(echo "" '\033[38;5;11m%30<...<%~%<<%{${NONE}$reset_color $(git_prompt_info)%{$fg[$NCOLOR]%}' "$ignition" '%{$reset_color%} ' )
-PROMPT=$(echo "" '%{$fg[yellow]%}$( shorten_path )%{${NONE}$reset_color $(git_prompt_info)%{$fg[$NCOLOR]%}' "$ignition" '%{$reset_color%} ' )
+PROMPT=$(echo "" '%{$fg[yellow]%}$( shorten_path )%{${NONE}$reset_color $(git_prompt_info)$(git_ahead)%{$fg[$NCOLOR]%}' "$ignition" '%{$reset_color%} ' )
 RPROMPT=''
 
 #ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[gray]%}(%{$fg_no_bold[yellow]%}%B"
