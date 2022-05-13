@@ -154,7 +154,7 @@ alias leaffetchw="fetchw '${KITCHEN}/pan/leaffetch/leaffetch' '--config none --c
 
 # Screensaver
 alias matrix='cmatrix -u 6'
-alias bonsai='cbonsai -li -t 0.04 -w 0.01 -L 64 -M 8'
+alias bonsai='cbonsai -li -t 0.04 -w 0.01 -L 36 -M 8'
 # alias fetch='neofetch --config /mnt/d/home/kitchen/config/neofetch/fetch.conf'
 
 # tmux
