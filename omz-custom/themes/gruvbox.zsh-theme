@@ -49,6 +49,20 @@ function getUniqueFolder() {
   echo "${trunc_path: : -1}"
 }
 
+git_ahead() {
+  if [[ $(git_prompt_info) ]]; then
+    num=$(git log --oneline @{u}..HEAD | grep -cE ".*")
+    if [[ num -gt 0 ]]
+    then
+      echo "~$num "
+    else
+      echo ""
+    fi
+  else
+    return 0
+  fi
+}
+
 # RANDOM=$$$(date +%s)
 # ignition=${PREFIXS[$RANDOM % ${#RANDOM[*]}+1]}
 ignition=${PREFIXS[2]}
