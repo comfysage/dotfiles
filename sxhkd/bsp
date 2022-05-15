@@ -20,6 +20,10 @@ super + Escape
 super + shift + r
 	bspc wm -r
 
+# restart config
+super + ctrl + r
+ ~/.config/bspwm/bspwmrc &
+
 # quit bspwm
 super + alt + q
 	bspc quit
