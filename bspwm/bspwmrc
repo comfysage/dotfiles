@@ -41,5 +41,6 @@ picom --config /home/comfy/.config/picom/bsp.conf &
 /mnt/d/bin/bsplaunch
 /home/comfy/.polybar
 
-/home/comfy/.ww
+#/home/comfy/.ww
+/mnt/d/bin/rw /mnt/d/home/kitchen/pictures/mut-ex-wallpapers/
 killall dunst; dunst &
