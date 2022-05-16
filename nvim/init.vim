@@ -206,6 +206,8 @@ set numberwidth=5
 set smarttab
 set conceallevel=2
 
+set shortmess=filnrxoOtTIF
+
 " When editing vim and markdown files don't show numbers
 au BufReadPost,BufRead,BufNewFile *.vim set nonu
 au BufReadPost,BufRead,BufNewFile *.markdown set nonu
