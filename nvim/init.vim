@@ -302,7 +302,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 set foldenable
 set foldlevelstart=0
-set foldnestmax=10
+set foldnestmax=4
 set foldmethod=marker
 
 " }}}
