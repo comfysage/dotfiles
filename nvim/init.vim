@@ -63,7 +63,7 @@ set laststatus=3
 
 source /mnt/d/home/kitchen/config/nvim/scripts/folds.vim
 
-set fillchars=fold:-,fold:-,foldclose:>
+set fillchars=fold:-,foldclose:>,eob:·
 
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
