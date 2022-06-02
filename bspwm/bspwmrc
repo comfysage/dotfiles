@@ -37,9 +37,9 @@ bspc rule -a Docky layer=above manage=on border=off focus=off locked=on
 
 # vmhgfs-fuse .host:/d /mnt/d
 xrandr --output Virtual1 --mode 1920x1080
-picom --config /home/comfy/.config/picom/bsp.conf &
 /mnt/d/bin/bsplaunch
 /home/comfy/.polybar
+/mnt/d/bin/picomlaunch bsp
 
 /home/comfy/.ww
 #/mnt/d/bin/rw /mnt/d/home/kitchen/pictures/mut-ex-wallpapers/
