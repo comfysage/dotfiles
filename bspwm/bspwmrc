@@ -44,3 +44,5 @@ xrandr --output Virtual1 --mode 1920x1080
 /home/comfy/.ww
 #/mnt/d/bin/rw /mnt/d/home/kitchen/pictures/mut-ex-wallpapers/
 killall dunst; dunst &
+
+/mnt/d/bin/bsplaunch
