@@ -18,6 +18,7 @@ session=${1:bspwm}
 case $session in
 	i3|i3wm  )  exec i3 ;;
 	bsp|bspwm  )  exec bspwm ;;
+	rose|rose-pine  )  exec bspwm -c ~/.config/bspwm/wmrc;;
   openbox )  exec openbox-session ;;
   bspwm-gnome ) exec gnome-session-bspwm ;;
   gnome )  exec gnome-session ;;
