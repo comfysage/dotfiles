@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+$HOME/.ww
+/mnt/d/bin/picomlaunch dwm
+/mnt/d/bin/switch gruvbox
+
+#/mnt/d/bin/rw /mnt/d/home/kitchen/pictures/mut-ex-wallpapers/
+killall dunst; dunst &
+
+/mnt/d/bin/dwmlaunch
