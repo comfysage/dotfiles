@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/.config/rofi/"
+
+rofi \
+	-theme "$DIR"/telescope.rasi \
+	-show
+	# -modi run,drun \
+	# -no-lazy-grab \
+	# -scroll-method 0 \
+	# -drun-match-fields all \
+	# -drun-display-format "{name}" \
+	# -no-drun-show-actions \
+	# -terminal alacritty \
+	# -kb-cancel Alt-F1 \
