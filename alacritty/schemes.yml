@@ -494,7 +494,7 @@ schemes:
       text: CellForeground
       background: "#787bb3"
     normal:
-      black: "#6E6C7E"
+      black: "#161821"
       red: "#b0727b"
       green: "#bb95b5"
       yellow: "#e2a478"
