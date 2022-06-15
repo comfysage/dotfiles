@@ -476,5 +476,47 @@ schemes:
       end:
         foreground: "#59546d"
         background: "#393552"
+  dawn: &dawn
+    primary:
+      background: "#161821"
+      foreground: "#f5f6f8"
+    cursor:
+      text: "#161821"
+      cursor: "#b0727b"
 
-colors: *fantastic
+    vi_mode_cursor:
+      text: "#161821"
+      cursor: "#b0727b"
+    line_indicator:
+      foreground: None
+      background: None
+    selection:
+      text: CellForeground
+      background: "#787bb3"
+    normal:
+      black: "#6E6C7E"
+      red: "#b0727b"
+      green: "#bb95b5"
+      yellow: "#e2a478"
+      blue: "#6164a2"
+      magenta: "#474d6a"
+      cyan: "#817c9c"
+      white: "#D9E0EE"
+    bright:
+      black: "#988BA2"
+      red: "#e28178"
+      green: "#9ad387"
+      yellow: "#e2c078"
+      blue: "#7f96db"
+      magenta: "#787bb3"
+      cyan: "#f5f6f8"
+      white: "#D9E0EE"
+    hints:
+      start:
+        foreground: "#817c9c"
+        background: "#393552"
+      end:
+        foreground: "#59546d"
+        background: "#393552"
+
+colors: *dawn
