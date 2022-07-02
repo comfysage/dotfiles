@@ -1,5 +1,6 @@
 shorten_path() {
   local current_path=$PWD
+  current_path=${current_path/#$HOME/"~"}
   local trunc_path
   # for each parent path component find the shortest unique beginning
   # characters sequence. Source: https://stackoverflow.com/a/45336078
@@ -9,7 +10,11 @@ shorten_path() {
     trunc_path="$(getUniqueFolder $PWD)"
     [[ $current_path == "~"* ]] && current_path="~${trunc_path//${home_path}/}" || current_path="/${trunc_path}"
   fi
-  echo "$current_path"
+
+  # remove /mnt/d/home/kitchen/ from path
+  local kitchen_path="/$(getUniqueFolder $KITCHEN)/"
+  kitchen_shortened=${current_path/#$kitchen_path/""}
+  [[ "$kitchen_shortened" == "$current_path" ]] && echo "$current_path" || echo "${PWD/#$KITCHEN/}"
 }
 
 function getUniqueFolder() {
