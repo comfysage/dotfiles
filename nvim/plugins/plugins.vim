@@ -28,6 +28,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 Plug 'airblade/vim-gitgutter'
 
+Plug 'elkowar/yuck.vim'
+
 " Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
