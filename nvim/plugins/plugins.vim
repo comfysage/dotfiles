@@ -73,6 +73,7 @@ Plug 'sainnhe/everforest'
 " Plug 'sainnhe/edge'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'crispybaccoon/gruvbox'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'joshdick/onedark.vim'
 Plug 'cocopon/iceberg.vim'
