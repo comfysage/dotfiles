@@ -11,7 +11,7 @@ Plug 'antonk52/vim-tabber'
 
 Plug 'vim-airline/vim-airline'
 " Plug 'cocopon/pgmnt.vim'
-Plug 'glepnir/dashboard-nvim'
+" Plug 'glepnir/dashboard-nvim'
 Plug 'ap/vim-css-color'
 
 " IDE
