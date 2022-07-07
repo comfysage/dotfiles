@@ -1,0 +1,24 @@
+
+! Dawn
+*.foreground: #f5f6f8
+*.background: #161821
+*.cursorColor: #b0727b
+
+*.color0: #161821
+*.color8: #474d6a
+*.color1: #b0727b
+*.color9: #e28178
+*.color2: #bb95b5
+*.color10: #9ad387
+*.color3: #e2a478
+*.color11: #e2c078
+*.color4: #6164a2
+*.color12: #7f96db
+*.color5: #474d6a
+*.color13: #787bb3
+*.color6: #817c9c
+*.color14: #f5f6f8
+*.color7: #D9E0EE
+*.color15: #D9E0EE
+
+! vim: ft=xdefaults

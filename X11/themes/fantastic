@@ -1,0 +1,24 @@
+
+! Fantastic
+*.foreground: #C6C8D1
+*.background: #161821
+*.cursorColor: #f28534
+
+*.color0: #161821
+*.color8: #3A3A4D
+*.color1: #E27878
+*.color9: #DC888A 
+*.color2: #B4BE82
+*.color10:#B8C092 
+*.color3: #E2A478
+*.color11:#DCAB8A 
+*.color4: #84A0C6
+*.color12:#91A8C8 
+*.color5: #A093C7
+*.color13:#A89EC9 
+*.color6: #89B8C2
+*.color7: #95BBC5 
+*.color7: #C6C8D1
+*.color15:#C6C8D1
+
+! vim: ft=xdefaults
