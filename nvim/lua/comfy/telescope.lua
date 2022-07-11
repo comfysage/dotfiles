@@ -43,7 +43,7 @@ M.IvyTheme = themes.get_ivy
 -- Space Station Theme
 
 M.StationTheme = {
-    winblend = 20;
+    -- winblend = 20;
     width = 0.8;
     show_line = false;
     prompt_prefix = '$ ';
@@ -63,7 +63,7 @@ function M.space(props)
     hidden = true,
   })
 
-  builtin.find_files(MergeTable(opts,props))
+  builtin.git_files(MergeTable(opts,props))
 end
 
 -- Explorer
