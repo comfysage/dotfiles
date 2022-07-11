@@ -27,6 +27,7 @@ Plug 'kyazdani42/nvim-web-devicons' " Icons for Telescope
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 Plug 'elkowar/yuck.vim'
 
