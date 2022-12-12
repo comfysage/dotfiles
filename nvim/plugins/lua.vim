@@ -13,5 +13,9 @@ plugins.plugin 'commentary'
 
 plugins.plugin 'color'
 plugins.plugin 'flowtype'
+plugins.plugin 'isolate'
+
+plugins.plugin 'filetype/cpp'
+plugins.plugin 'filetype/c'
 
 EOF
