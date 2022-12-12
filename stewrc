@@ -30,6 +30,7 @@
     "zshrc": ["~/.zshrc"],
     "zsh_history": [".zsh_history"],
     "lsd": [".config/lsd"],
-    "qutebrowser": ["/home/comfy/.config/qutebrowser"]
+    "qutebrowser": ["/home/comfy/.config/qutebrowser"],
+    "dwm-autostart": ["/home/comfy/.config/dwm/autostart.sh"],
   }
 }
