@@ -2,19 +2,19 @@ local nvim_lsp = require('lspconfig')
 local protocol = require('vim.lsp.protocol')
 
 local on_attach = function(client, bufnr)
- local buf_set_keymap = function(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
- local buf_set_option = function(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+ -- local buf_set_keymap = function(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+ -- local buf_set_option = function(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
  -- Mappings.
  local opts = { noremap = true, silent = true }
 
- buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
- buf_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
- buf_set_keymap('n', '<leader>l', ':lua vim.lsp.buf', { noremap = true })
- buf_set_keymap('n', 'gl', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
- buf_set_keymap('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
- buf_set_keymap('n', '<space>s', '<Cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.keymap.set('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.keymap.set('n', '<leader>l', ':lua vim.lsp.buf', { noremap = true })
+  vim.keymap.set('n', 'gl', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.keymap.set('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  vim.keymap.set('n', '<space>s', '<Cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
 
  -- require 'completion'.on_attach(client, bufnr)
 end
