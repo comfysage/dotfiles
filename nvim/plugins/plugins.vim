@@ -84,8 +84,8 @@ Plug 'cocopon/iceberg.vim'
 " Plug 'andreypopp/vim-colors-plain'
 Plug 'crispybaccoon/fantastic.vim'
 Plug 'crispybaccoon/dawn.vim'
-Plug 'atelierbram/Base2Tone-vim'
-Plug 'pwntester/nautilus.nvim'
-Plug 'folke/tokyonight.nvim'
+" Plug 'atelierbram/Base2Tone-vim'
+" Plug 'pwntester/nautilus.nvim'
+" Plug 'folke/tokyonight.nvim'
 
 call plug#end()
