@@ -3,7 +3,7 @@ import:
 
 colors:
   primary:
-    background: '#0B0F10'
+    # background: '#0B0F10'
     # background: '#1d2021'
 
 font:
