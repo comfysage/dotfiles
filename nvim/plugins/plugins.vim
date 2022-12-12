@@ -9,6 +9,7 @@ Plug 'rbgrouleff/bclose.vim' "ranger.vim needs it
 Plug 'jiangmiao/auto-pairs' "auto brackets
 Plug 'antonk52/vim-tabber' 
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-peekaboo'
 
 Plug 'vim-airline/vim-airline'
 " Plug 'cocopon/pgmnt.vim'
