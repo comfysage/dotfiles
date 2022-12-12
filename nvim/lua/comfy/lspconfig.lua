@@ -38,7 +38,6 @@ nvim_lsp.sumneko_lua.setup {
 }
 nvim_lsp.gopls.setup {
  on_attach = on_attach,
- cmd = { lspservers .. '/go/gopls' }
 }
 nvim_lsp.vuels.setup {
  on_attach = on_attach,
