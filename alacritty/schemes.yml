@@ -351,10 +351,10 @@ schemes:
       foreground: "#e0def4"
     cursor:
       text: "#232136"
-      cursor: "#825B65"
+      cursor: "#ebbcba"
     vi_mode_cursor:
       text: "#191724"
-      cursor: "#825B65"
+      cursor: "#ebbcba"
     line_indicator:
       foreground: None
       background: None
