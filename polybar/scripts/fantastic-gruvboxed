@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+bspc config top_padding         40
+bspc config bottom_padding       0
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -x polybar >/dev/null; do sleep 0.1; done
+
+# Launch polybar
+polybar -r -c="/mnt/d/home/kitchen/config/polybar/fantastic-gruvboxed.ini" fantastic-left >>"/tmp/fantastic-left.log" 2>&1 &
+polybar -r -c="/mnt/d/home/kitchen/config/polybar/fantastic-gruvboxed.ini" fantastic-middle >>"/tmp/fantastic-middle.log" 2>&1 &
+polybar -r -c="/mnt/d/home/kitchen/config/polybar/fantastic-gruvboxed.ini" fantastic-right >>"/tmp/fantastic-right.log" 2>&1 &
+
+cat << EOF  > ~/.polybar
+#!/usr/bin/env bash
+
+killall -q polybar
+while pgrep -x polybar >/dev/null; do sleep 0.1; done
+
+EOF
+echo "polybar -r -c=\"/mnt/d/home/kitchen/config/polybar/fantastic-gruvboxed.ini\" fantastic-left >>\"/tmp/fantastic-left.log\" 2>&1 &" >> ~/.polybar
+echo "polybar -r -c=\"/mnt/d/home/kitchen/config/polybar/fantastic-gruvboxed.ini\" fantastic-middle >>\"/tmp/fantastic-middle.log\" 2>&1 &" >> ~/.polybar
+echo "polybar -r -c=\"/mnt/d/home/kitchen/config/polybar/fantastic-gruvboxed.ini\" fantastic-right >>\"/tmp/fantastic-right.log\" 2>&1 &" >> ~/.polybar
+
