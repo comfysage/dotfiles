@@ -9,8 +9,10 @@ local on_attach = function(client, bufnr)
  local opts = { noremap = true, silent = true }
 
   vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.keymap.set('n', '<space>k', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+  -- vim.keymap.set('n', '<space>k', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.keymap.set('n', '<space>k', '<Cmd>Lspsaga hover_doc<CR>', opts)
   vim.keymap.set('n', '<leader>l', ':lua vim.lsp.buf', { noremap = true })
   vim.keymap.set('n', 'gl', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.keymap.set('n', '<space>l', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
