@@ -39,7 +39,7 @@ bspc rule -a Docky layer=above manage=on border=off focus=off locked=on
 # vmhgfs-fuse .host:/d /mnt/d
 xrandr --output Virtual1 --mode 1920x1080
 /mnt/d/bin/picomlaunch bsp
-/mnt/d/bin/polylaunch macos macos
+/mnt/d/home/kitchen/config/polybar/scripts/fantastic-gruvboxed
 /mnt/d/bin/switch gruvbox
 
 /home/comfy/.ww
