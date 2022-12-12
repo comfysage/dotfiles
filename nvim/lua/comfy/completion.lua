@@ -62,6 +62,16 @@ cmp.setup.filetype('gitcommit', {
   })
 })
 
+cmp.setup.filetype('markdown', {
+  sources = cmp.config.sources({
+    { name = 'luasnip', max_item_count = 4 }, -- For luasnip users.
+  }, {
+    { name = 'path' },
+    { name = 'buffer', max_item_count = 5 },
+    {	name = "dictionary", keyword_length = 2,	},
+  })
+})
+
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
   sources = {
