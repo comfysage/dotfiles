@@ -67,6 +67,7 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'uga-rosa/cmp-dictionary'
 Plug 'onsails/lspkind-nvim'
 
 " LuaSnip
