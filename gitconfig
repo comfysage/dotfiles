@@ -1,5 +1,6 @@
 [core]
 	editor = nvim
+	autocrlf = false
 [user]
 	email = 67917529+CrispyBaccoon@users.noreply.github.com
 	name = CrispyBaccoon
