@@ -13,6 +13,8 @@ fi
 xsetroot -cursor_name left_ptr
 [[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap
 
+/mnt/d/bin/screen
+
 session=${1:bspwm}
 
 case $session in
