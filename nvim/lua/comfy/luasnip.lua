@@ -115,6 +115,4 @@ vim.keymap.set("i", "<c-l>", function()
   end
 end)
 
-vim.keymap.set("i", "<c-u>", require 'luasnip.extras.select_choice' )
-
 
