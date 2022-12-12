@@ -17,6 +17,7 @@ Plug 'ap/vim-css-color'
 " IDE
 Plug 'mattn/emmet-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 " NERDTree
 " Plug 'scrooloose/nerdtree'
