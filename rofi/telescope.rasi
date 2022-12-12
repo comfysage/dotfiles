@@ -9,6 +9,7 @@ configuration {
 
 * {
 	bg:               #1d2021;
+ bg-accent:        #1d2021aa;
 	fg:               #fbf1c7;
 	gray:             #555148;
  /*
@@ -74,8 +75,9 @@ mainbox {
  /*
 	padding:                        2% 1% 2% 1%;
  */
-	padding:                        0px;
-	background-color:               transparent;
+ border-radius:                  8px;
+	padding:                        20px;
+	background-color:               @bg-accent;
 }
 
 element {
