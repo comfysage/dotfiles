@@ -2,7 +2,8 @@
 ! Gruvbox
 *.foreground: #fbf1c7
 *.background: #1d2021
-*.cursorColor: #f28534
+!*.cursorColor: #f28534
+*.cursorColor: #fe8019
 
 *.color0: #1d2021
 *.color8: #555148
@@ -11,7 +12,8 @@
 *.color2: #b0b846
 *.color10: #a9b665
 *.color3: #fabd2f
-*.color11: #f28534
+!*.color11: #f28534
+*.color11: #fe8019
 *.color4: #80aa9e
 *.color12: #7daea3
 *.color5: #d3869b
