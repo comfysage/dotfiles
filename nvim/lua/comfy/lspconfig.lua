@@ -69,3 +69,15 @@ nvim_lsp.sorbet.setup {
  cmd = { lspservers .. '/sorbet/bin/srb' },
  filetypes = { "ruby" }
 }
+
+vim.diagnostic.config {
+ float = true,
+ severity_sort = false,
+ signs = true,
+ underline = true,
+ update_in_insert = false,
+ virtual_text = {
+  spacing = 4,
+  prefix = " >",
+ }
+}
