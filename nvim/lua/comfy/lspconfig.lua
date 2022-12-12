@@ -39,6 +39,9 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.gopls.setup {
  on_attach = on_attach,
 }
+nvim_lsp.ccls.setup {
+ on_attach = on_attach,
+}
 nvim_lsp.vuels.setup {
  on_attach = on_attach,
  cmd = { lspservers .. '/vuels/node_modules/vls/bin/vls' }
