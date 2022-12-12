@@ -64,3 +64,8 @@ nvim_lsp.perlnavigator.setup {
   on_attach = on_attach,
   cmd = {'/home/comfy/.local/share/nvim/lsp_servers/tailwindcss_npm/node_modules/@tailwindcss/language-server/bin/tailwindcss-language-server'}
 } ]]
+nvim_lsp.sorbet.setup {
+ on_attach = on_attach,
+ cmd = { lspservers .. '/sorbet/bin/srb' },
+ filetypes = { "ruby" }
+}
