@@ -10,11 +10,11 @@ local on_attach = function(client, bufnr)
 
   vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.keymap.set('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.keymap.set('n', '<space>k', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   vim.keymap.set('n', '<leader>l', ':lua vim.lsp.buf', { noremap = true })
   vim.keymap.set('n', 'gl', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.keymap.set('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
-  vim.keymap.set('n', '<space>s', '<Cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
+  vim.keymap.set('n', '<space>l', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  vim.keymap.set('n', ',s', '<Cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
 
  -- require 'completion'.on_attach(client, bufnr)
 end
