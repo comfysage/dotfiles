@@ -90,7 +90,7 @@ snippets.markdown = {
  end) } ))
 }
 
-ls.snippets = snippets
+require("luasnip.loaders.from_lua").load({paths = "/mnt/d/home/kitchen/config/nvim/snip"})
 
 -- this will expand the current item or jump to the next item within the snippet.
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
