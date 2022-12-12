@@ -25,6 +25,8 @@ case $session in
   bspwm-gnome ) exec gnome-session-bspwm ;;
   gnome )  exec gnome-session ;;
 	awesome|awesomewm  )  exec awesome ;;
+	qtile )  exec qtile start ;;
+	dwm )  exec /mnt/d/bin/redwm > $HOME/.startx.out.txt ;;
 	*  )  exec $1 ;;
 esac
 
