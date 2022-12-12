@@ -1,6 +1,8 @@
 # Decorator
-window.active.title.bg.color: #1d2021
-window.inactive.title.bg.color: #1d2021
+#window.active.title.bg.color: #1d2021
+#window.inactive.title.bg.color: #1d2021
+window.active.title.bg.color: #262626
+window.inactive.title.bg.color: #262626
 window.*.label.text.color: #fbf1c7
 window.*.button.*.image.color: #d8dee8
 
