@@ -5,6 +5,9 @@ alt + Return
 super + @space
   /home/comfy/.config/rofi/sushi
 
+alt + @space
+  /home/comfy/.config/rofi/telescope
+
 alt + w
   /home/comfy/.config/rofi/launcher
 
