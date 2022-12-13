@@ -1,3 +1,6 @@
+local status, _ = pcall(require, 'luasnip')
+if not status then return end
+
 local ls = require 'luasnip'
 local types = require 'luasnip.util.types'
 
@@ -115,4 +118,9 @@ vim.keymap.set("i", "<c-l>", function()
   end
 end)
 
+local function prequire(...)
+  local status, lib = pcall(require, ...)
+  if (status) then return lib end
+  return nil
+end
 

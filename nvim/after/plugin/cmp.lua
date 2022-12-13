@@ -1,3 +1,8 @@
+local status, _ = pcall(require, 'telescope')
+if not status then return end
+status, _ = pcall(require, 'lspkind')
+if not status then return end
+
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
 local lspkind = require 'lspkind'
@@ -22,6 +27,15 @@ cmp.setup {
       c = cmp.mapping.close(),
     }),
     ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    --[[ ['<Down>'] = function(fallback)
+      if cmp.visible() then cmp.mapping.select_next_item()
+      else fallback() end
+    end,
+    ['<Up>'] = function(fallback) if cmp.visible() then cmp.mapping.select_prev_item()
+      else fallback() end
+    end, ]]
+    ['<Down>'] = cmp.mapping( cmp.mapping.select_next_item() ),
+    ['<Up>'] = cmp.mapping( cmp.mapping.select_prev_item() ),
   },
   sources = cmp.config.sources({
     { name = 'nvim_lua' },
@@ -56,7 +70,7 @@ cmp.setup {
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({
-    { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it. 
+    -- { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
   }, {
     { name = 'buffer' },
   })

@@ -1,3 +1,6 @@
+local status, _ = pcall(require, 'lspconfig')
+if not status then return end
+
 local nvim_lsp = require('lspconfig')
 local protocol = require('vim.lsp.protocol')
 
@@ -34,7 +37,20 @@ nvim_lsp.cssls.setup {
 }
 nvim_lsp.sumneko_lua.setup {
  on_attach = on_attach,
- cmd = { lspservers .. '/sumneko_lua/extension/server/bin/lua-language-server' }
+ cmd = { lspservers .. '/sumneko_lua/extension/server/bin/lua-language-server' },
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- recognize 'vim' global
+        globals = { 'vim' }
+      },
+
+      workspace = {
+        -- Make server aware of nvim runtime files
+        library = vim.api.nvim_get_runtime_file("", true)
+      }
+    }
+  }
 }
 nvim_lsp.gopls.setup {
  on_attach = on_attach,

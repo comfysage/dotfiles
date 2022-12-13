@@ -1,5 +1,7 @@
+local status, _ = pcall(require, 'lspsaga')
+if not status then return end
 
-local saga = R'lspsaga'
+local saga = require 'lspsaga'
 
 saga.init_lsp_saga {
   -- error_sign = '*',
