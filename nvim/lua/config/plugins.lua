@@ -40,6 +40,9 @@ return require('packer').startup(function(use)
   use 'nullchilly/fsread.nvim'
 
   use 'vim-airline/vim-airline'
+  use { 'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons' }
 
   use 'ap/vim-css-color'
 
