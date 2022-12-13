@@ -29,7 +29,6 @@ extensions = {
                                        -- the default case_mode is "smart_case"
     },
     file_browser = {
-      theme = 'dropdown',
       hijack_netrw = true,
     },
   }
