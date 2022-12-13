@@ -6,7 +6,11 @@ nmap <silent> <leader>r :source /mnt/d/home/kitchen/config/nvim/init.vim<CR>
 nmap <silent> <leader>v :e /mnt/d/home/kitchen/config/nvim/init.vim<CR>
 
 nnoremap <silent> <leader>s <Cmd>source %<CR>
-nmap <silent> <C-s> :w<CR>
+vnoremap <silent> <leader>s <Cmd>'<,'>source<CR>
+" nmap <silent> <C-s> :w<CR>
+nnoremap <C-S>      :<C-U>update<CR>
+vnoremap <C-S>      :<C-U>update<CR>gv
+inoremap <C-S>      <C-O>:update<CR>
 
 " }}}
 
@@ -60,6 +64,8 @@ endif
 
 set foldcolumn=0
 set laststatus=3
+"set winbar=%=%f%m%=%=%=%=%=
+set winbar&
 
 source /mnt/d/home/kitchen/config/nvim/scripts/folds.vim
 
@@ -83,7 +89,7 @@ set background=dark
 
 " GruvboxTheme {{{
 
-let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 let g:gruvbox_improved_strings = 0
 
@@ -103,10 +109,12 @@ let g:gruvbox_material_transparent_background = 1
 
 " EdgeTheme {{{
 
-let g:edge_style = 'aura'
+let g:edge_style = 'default'
+let g:edge_better_performance = 1
 let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 1
-let g:edge_transparent_background = 1
+let g:edge_transparent_background = 2
+let g:edge_dim_foreground = 1
 
 " }}}
 
@@ -208,6 +216,8 @@ set conceallevel=2
 
 set shortmess=filnrxoOtTIF
 
+nnoremap <F1> <nop>
+
 " When editing vim and markdown files don't show numbers
 au BufReadPost,BufRead,BufNewFile *.vim set nonu
 au BufReadPost,BufRead,BufNewFile *.markdown set nonu
@@ -238,18 +248,34 @@ set smartcase
 " Scrolling
 set scrolloff=5
 
+" RPC Server
+
+function! IsServer()
+  return serverlist() == ['/tmp/vi.pipe']
+endfunction
+
+function! QuitServer()
+  if IsServer()
+    call system("rm $VISERVER")
+  endif
+endfunction
+
+autocmd VimLeavePre * call QuitServer()
+
 " }}}
 
 " Basic Keybinds {{{
 
 "inoremap jk <ESC>
 nmap ; viw
+" nnoremap <C-d> <ESC>viw
+" inoremap <C-d> <ESC>viw
 
 nmap <silent> <space>s <cmd>PrettierAsync<CR>
 
 nmap <space>e $<ESC>
 nmap <space>q ^<ESC>
-nmap <space><space> <ESC>:<BACKSPACE>zz
+"nmap <space><space> <ESC>:<BACKSPACE>zz
 
 " Invert NumberLine
 nmap <silent> <leader>n :set invnu<CR>
@@ -258,31 +284,36 @@ nmap <silent> <leader>n :set invnu<CR>
 " nmap <leader>v "*p
 
 " Move Selected Line up and down
-xnoremap J :move '>+1<CR>gv-gv
-xnoremap K :move '<-2<CR>gv-gv
+" nnoremap J <Cmd>move +1<CR>
+" nnoremap K <Cmd>move -2<CR>
+vnoremap J :move '>+1<CR>gv-gv
+vnoremap K :move '<-2<CR>gv-gv
 
 " < and > indents
 vnoremap < <gv
 vnoremap > >gv
 
+nnoremap ,f gg=G``:w<CR>
+nnoremap ,m <Cmd>%norm! gww<CR>
+
 " Surround Selection
 vnoremap o <ESC>'<O<ESC>'>o<ESC>gv
 
 nmap ++ gcc
-vmap ++ gcc
-
-nnoremap gqp gqap
+vmap ++ gc
 
 nnoremap ga $<ESC>
 nnoremap gi ^<ESC>
 
 nnoremap C cc<ESC>
+nnoremap <M-v> ^v$
 
-nnoremap ss <C-o>
+nnoremap sd <C-o>
+nnoremap ss ``
 
-nmap qw :wq
-nmap qq :q
-nmap Q :qa
+"nmap qw :wq
+"nmap qq :q
+"nmap Q :qa
 
 nmap B :Bclose 
 
@@ -304,6 +335,12 @@ set foldenable
 set foldlevelstart=0
 set foldnestmax=4
 set foldmethod=marker
+
+" }}}
+
+" Git {{{
+
+nnoremap <space>- <Cmd>GitGutterStageHunk<CR>
 
 " }}}
 
@@ -343,14 +380,101 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " }}}
 
+" Easy Align {{{
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" }}}
+
+" mkdir path {{{
+
+function s:Mkdir()
+  let dir = expand('%:p:h')
+
+  if dir =~ '://'
+    return
+  endif
+
+  if !isdirectory(dir)
+    call mkdir(dir, 'p')
+    echo 'Created non-existing directory: '.dir
+  endif
+endfunction
+
+autocmd BufWritePre * call s:Mkdir()
+
+" }}}
+
 " StatusLine {{{
 
 " source /mnt/d/home/kitchen/config/nvim/themes/StatusLine.vim
 lua R'soil'
 
 " Toggle StatusLine
-command! -nargs=0 ToggleStatusLine if &ls == 0 | set ls=3 | else | set ls=0 | endif
+command! -nargs=0 ToggleStatusLine if &ls == 0 | set ls=3 | set ch=1 | else | set ls=0 | set ch=0 | endif
 nnoremap <space><ESC> <Cmd>ToggleStatusLine<CR>
+
+let g:airline_powerline_fonts = 0
+let g:airline_mode_map = {
+    \ '__'     : '-',
+    \ 'c'      : 'C',
+    \ 'i'      : 'I',
+    \ 'ic'     : 'I',
+    \ 'ix'     : 'I',
+    \ 'n'      : 'N',
+    \ 'multi'  : 'M',
+    \ 'ni'     : 'N',
+    \ 'no'     : 'N',
+    \ 'R'      : 'R',
+    \ 'Rv'     : 'R',
+    \ 's'      : 'S',
+    \ 'S'      : 'S',
+    \ ''     : 'S',
+    \ 't'      : 'T',
+    \ 'v'      : 'V',
+    \ 'V'      : 'V',
+    \ ''     : 'V',
+    \ }
+
+let g:airline#extensions#wordcount#formatter#default#fmt = 'W %s'
+
+" call g:airline#extensions#whitespace#disable()
+
+let g:airline_left_sep = ""
+let g:airline_left_alt_sep = "|"
+let g:airline_right_sep = ""
+let g:airline_right_alt_sep = "|"
+
+let g:airline_symbols = {
+    \ 'linenr': ' ',
+    \ 'modified': '+',
+    \ 'whitespace': '',
+    \ 'branch': '',
+    \ 'ellipsis': '...',
+    \ 'paste': 'PASTE',
+    \ 'maxlinenr': ' ',
+    \ 'readonly': '-',
+    \ 'spell': 'SPELL',
+    \ 'space': ' ',
+    \ 'dirty': '*',
+    \ 'colnr': '',
+    \ 'keymap': 'Keymap:',
+    \ 'crypt': '-',
+    \ 'notexists': 'E',
+    \ }
+
+let g:airline_section_y = '%{airline#util#wrap(airline#parts#ffenc() == "utf-8[unix]" ? "" : airline#parts#ffenc(),0)}'
+let g:airline_section_z = "%p%%%#__accent_bold#%{g:airline_symbols.linenr}%l%#__restore__#%#__accent_bold#/%L%{g:airline_symbols.maxlinenr}%#__restore__#"
+let g:airline_section_z = "%#__accent_bold#%{g:airline_symbols.linenr}%l%#__restore__#%#__accent_bold#:%L%{g:airline_symbols.maxlinenr}%#__restore__#"
+let g:airline_section_b = '%{expand("%:.:h")}'
+let g:airline_section_c = '%<%<%{expand("%:t")}%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#%#__accent_bold#%#__restore__#%#__accent_bold#%#__restore__#'
+
+" Disable Airline
+" let g:airline_disable_statusline = 1
 
 " }}}
 
@@ -429,6 +553,8 @@ nmap <silent> <space>l :wincmd l<CR>
 
 " Terminal {{{
 
+autocmd TermOpen set nonu
+
 tnoremap <Esc> <C-\><C-n>
 " tmap <silent> <C-Left>  <Cmd>wincmd h<CR>
 " tmap <silent> <C-Down>  <Cmd>wincmd j<CR>
@@ -462,6 +588,24 @@ nmap <silent> <space><TAB> :$tabedit<CR>
 " coc.nvim {{{
 
 "source /mnt/d/home/kitchen/config/nvim/plugins/coc.vim
+
+" }}}
+
+" Vim Illuminate {{{
+
+hi! link CurrentWord SignColumn
+"hi! IlluminatedWordRead gui=reverse
+" hi! link IlluminatedWordRead CurrentWord
+
+" }}}
+
+" FSRead {{{
+
+luafile ~/.vim/plugged/fsread.nvim/plugin/fsread.lua
+lua vim.g.flow_strength = 0.7
+lua vim.g.skip_flow_default_hl = true
+lua vim.api.nvim_set_hl(0, "FSPrefix", { fg = "#f5cb9e" })
+lua vim.api.nvim_set_hl(0, "FSSuffix", { fg = "#504945" })
 
 " }}}
 
@@ -502,8 +646,21 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 vmap ( S(
 vmap { S{
 vmap [ S[
-vmap " S"
-vmap ' S'
+"vmap " S"
+"vmap ' S'
+
+" }}}
+
+" Smoothie {{{
+
+let g:smoothie_no_default_mappings = v:true
+nnoremap <unique> <C-J> <cmd>call smoothie#do("\<C-D>") <CR>
+nnoremap <unique> <C-K> <cmd>call smoothie#do("\<C-U>") <CR>
+nnoremap <unique> zz <cmd>call smoothie#do("zz") <CR>
+nnoremap <unique> zt <cmd>call smoothie#do("zt") <CR>
+nnoremap <unique> zb <cmd>call smoothie#do("zb") <CR>
+nnoremap <unique> gg <cmd>call smoothie#do("gg") <CR>
+nnoremap <unique> G <cmd>call smoothie#do("G") <CR>
 
 " }}}
 
@@ -595,7 +752,7 @@ let g:DevIconsDefaultFolderOpenSymbol = ''
 
 " enable folder/directory glyph flag (disabled by default with 0)
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 
 " Disable arrow icons at the left side of folders for NERDTree.
@@ -613,3 +770,10 @@ endif
 
 " }}}
 
+" netrw {{{
+
+nmap <space>n <cmd>20Lex!<CR>
+let g:netrw_liststyle = 3
+hi! link netrwTreeBar NonText
+
+" }}}
