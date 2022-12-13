@@ -51,6 +51,9 @@ vim.keymap.set("n", "<space>ff", "<cmd>lua require'config.plugin.telescope'.expl
 vim.keymap.set("n", "<space>fs", "<cmd>lua require'config.plugin.telescope'.symbols{}<CR>")
 vim.keymap.set("n", "<space>fg", "<cmd>lua require'config.plugin.telescope'.git_files{}<CR>")
 
+-- file_browser ( use Shift-Enter to create from prompt )
+vim.keymap.set("n", "<space>fd", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>")
+
 vim.keymap.set("n", "<space>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>")
 vim.keymap.set("n", "<space>ft", "<cmd>lua require('telescope.builtin').filetypes()<CR>")
 
