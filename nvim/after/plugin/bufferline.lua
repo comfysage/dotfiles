@@ -1,12 +1,12 @@
 local status, _ = pcall(require, 'bufferline')
 if not status then return end
 
-require "bufferline" .setup {
+require "bufferline".setup {
     options = {
         --mode = "tabs",
         indicator = {
             icon = '▎', -- this should be omitted if indicator style is not 'icon'
-            style = 'icon'-- | 'underline' | 'none',
+            style = 'icon' -- | 'underline' | 'none',
         },
         buffer_close_icon = '',
         modified_icon = '●',
