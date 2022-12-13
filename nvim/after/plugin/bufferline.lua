@@ -68,3 +68,6 @@ end
 vim.cmd [[
 hi! BufferLineBufferSelected cterm=bold gui=bold
 ]]
+
+vim.keymap.set("n", "<TAB>", function() require'bufferline'.cycle(1) end, { silent = true })
+vim.keymap.set("n", "<S-TAB>", function() require'bufferline'.cycle(-1) end, { silent = true })
