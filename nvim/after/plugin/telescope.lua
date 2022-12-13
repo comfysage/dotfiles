@@ -37,19 +37,20 @@ extensions = {
 
 -- Extensions
 
-require('telescope').load_extension('fzf')
-require('telescope').load_extension('file_browser')
+require 'telescope' .load_extension 'fzf'
+require 'telescope' .load_extension 'file_browser'
 
 -- Custom
 
 vim.keymap.set("n", "<space>t", ":Telescope<CR>")
-vim.keymap.set("n", "<space>fv", "<cmd>lua require'config.plugin.telescope'.edit_dotfiles()<CR>")
-vim.keymap.set("n", "<space>fn", "<cmd>lua require'config.plugin.telescope'.edit_notes()<CR>")
-vim.keymap.set("n", "<space>ff", "<cmd>lua require'config.plugin.telescope'.explorer{}<CR>")
 vim.keymap.set("n", "<space><space>", "<cmd>lua require'config.plugin.telescope'.space{}<CR>")
 vim.keymap.set("n", "<space>fr", "<cmd>lua require'config.plugin.telescope'.grep{}<CR>")
+vim.keymap.set("n", "<space>fv", "<cmd>lua require'config.plugin.telescope'.edit_dotfiles()<CR>")
+vim.keymap.set("n", "<space>ff", "<cmd>lua require'config.plugin.telescope'.explorer{}<CR>")
+
 vim.keymap.set("n", "<space>fs", "<cmd>lua require'config.plugin.telescope'.symbols{}<CR>")
 vim.keymap.set("n", "<space>fg", "<cmd>lua require'config.plugin.telescope'.git_files{}<CR>")
+
 vim.keymap.set("n", "<space>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>")
 vim.keymap.set("n", "<space>ft", "<cmd>lua require('telescope.builtin').filetypes()<CR>")
 
