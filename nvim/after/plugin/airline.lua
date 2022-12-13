@@ -56,3 +56,5 @@ vim.g.airline_section_c = '%<%<%{expand("%:t")}%m %#__accent_red#%{airline#util#
 
 -- Disable Airline
 -- vim.g.airline_disable_statusline = 1
+
+vim.cmd [[ AirlineRefresh ]]
