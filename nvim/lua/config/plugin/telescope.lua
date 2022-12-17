@@ -137,6 +137,12 @@ end
 
 -- 
 
+function M.grep_current_file (props)
+  local opts = MergeTable(M.StationTheme, { })
+
+  builtin.current_buffer_fuzzy_find(MergeTable(opts, props))
+end
+
 pickers.new {
   results_title = "Resources",
   -- Run an external command and show the results in the finder window

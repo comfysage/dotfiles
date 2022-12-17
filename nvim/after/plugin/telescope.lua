@@ -46,6 +46,7 @@ vim.keymap.set("n", "<space><space>", "<cmd>lua require'config.plugin.telescope'
 vim.keymap.set("n", "<space>fr", "<cmd>lua require'config.plugin.telescope'.grep{}<CR>")
 vim.keymap.set("n", "<space>fv", "<cmd>lua require'config.plugin.telescope'.edit_dotfiles()<CR>")
 vim.keymap.set("n", "<space>ff", "<cmd>lua require'config.plugin.telescope'.explorer{}<CR>")
+vim.keymap.set("n", "<space>/", "<cmd>lua require'config.plugin.telescope'.grep_current_file{}<CR>")
 
 vim.keymap.set("n", "<space>fs", "<cmd>lua require'config.plugin.telescope'.symbols{}<CR>")
 vim.keymap.set("n", "<space>fg", "<cmd>lua require'config.plugin.telescope'.git_files{}<CR>")
