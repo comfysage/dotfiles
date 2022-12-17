@@ -18,8 +18,13 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>k', '<Cmd>Lspsaga hover_doc<CR>', opts)
   vim.keymap.set('n', '<leader>l', ':lua vim.lsp.buf', { noremap = true })
   vim.keymap.set('n', 'gl', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.keymap.set('n', '<space>l', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  -- vim.keymap.set('n', '<space>l', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
   vim.keymap.set('n', ',s', '<Cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
+
+  -- diagnostics
+  vim.keymap.set('n', '<space>l', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
+  vim.keymap.set('n', '<M-j>', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+  vim.keymap.set('n', '<M-k>', '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 
  -- require 'completion'.on_attach(client, bufnr)
 end
