@@ -1,12 +1,12 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- source on write
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
+local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+  command = 'source <afile> | PackerCompile',
+  group = packer_group,
+  pattern = 'plugins.lua',
+})
 
 -- Only required if you have packer configured as `opt`
 local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
