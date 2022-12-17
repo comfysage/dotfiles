@@ -26,6 +26,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<M-j>', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
   vim.keymap.set('n', '<M-k>', '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 
+  -- symbols
+  vim.keymap.set('n', '<space>fs', function() require'telescope.builtin'.lsp_document_symbols() end, opts)
+  vim.keymap.set('n', '<space>fS', function() require'telescope.builtin'.lsp_workspace_symbols() end, opts)
+
  -- require 'completion'.on_attach(client, bufnr)
 end
 
