@@ -44,7 +44,8 @@ return require('packer').startup(function(use)
     tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons' } ]]
 
-  use 'ap/vim-css-color'
+  -- use 'ap/vim-css-color'
+  use 'norcalli/nvim-colorizer.lua'
 
   -- IDE
   use 'mattn/emmet-vim'
