@@ -78,8 +78,14 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  use { -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    requires = {
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+    },
+  }
   use 'glepnir/lspsaga.nvim'
 
   -- Nvim cmp
