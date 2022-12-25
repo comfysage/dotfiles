@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
   use 'junegunn/goyo.vim'
   use 'junegunn/limelight.vim'
 
+  use { 'numToStr/FTerm.nvim', as = "fterm" }
+
   -- Lua
   use 'nvim-lua/plenary.nvim' -- utils
   use 'nvim-lua/popup.nvim'
