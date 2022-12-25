@@ -56,7 +56,7 @@ return require('packer').startup(function(use)
 
   use 'pangloss/vim-javascript'
   use { 'prettier/vim-prettier', run = 'npm install --frozen-lockfile --production' }
-  use 'airblade/vim-gitgutter'
+  use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive'
   use 'sheerun/vim-polyglot'
 
