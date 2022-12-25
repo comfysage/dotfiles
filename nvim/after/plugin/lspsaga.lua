@@ -26,3 +26,12 @@ saga.init_lsp_saga {
 vim.cmd([[
 hi! link LspSagaFinderSelection Search
 ]])
+
+vim.cmd [[
+function! Float_term()
+  Lspsaga open_floaterm
+  tnoremap <buffer> <ESC> <cmd>Lspsaga close_floaterm<cr>
+endfunction
+]]
+
+vim.keymap.set("n", "<space>w", "<cmd>call Float_term()<cr>")
