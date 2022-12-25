@@ -7,7 +7,7 @@ require('telescope').setup{
   defaults = {
     prompt_prefix = '$ ',
     file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-    file_ignore_patterns = {"node_modules", ".git"},
+    file_ignore_patterns = {"node_modules", "\\.git"},
     borderchars = {
       { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
       prompt = {"─", "│", "-", "│", '┌', '┐', "┘", "└"},
