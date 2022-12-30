@@ -8,7 +8,13 @@ require 'config.maps'
 require 'config.plugins'
 
 -- load after plugins
-vim.cmd [[runtime! after/plugin/**/*.lua]]
+  local plugin = vim.split(
+vim.fn.glob("/mnt/d/home/kitchen/config/nvim/after/plugin/**/*.lua"),
+"\n"
+    )
+  for _, plug in pairs(plugin) do
+    vim.cmd ( "source " .. plug )
+  end
 
 --[[ local has = vim.fn.has
 local is_mac = has "macunix"
