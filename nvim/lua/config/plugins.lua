@@ -19,8 +19,14 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 -- custom Plug commands
-vim.cmd [[ command! -nargs=0 PlugClean PackerClean ]]
-vim.cmd [[ command! -nargs=0 PlugInstall PackerInstall ]]
+local alias = function (verb)
+  local cverb = string.upper(string.sub(verb, 1,1)) .. string.sub(verb, 2)
+  vim.api.nvim_create_user_command('Plug' .. cverb, function(_) require 'packer'[verb]() end, {})
+end
+alias 'sync'
+alias 'clean'
+alias 'install'
+alias 'update'
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
