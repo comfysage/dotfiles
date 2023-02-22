@@ -37,7 +37,8 @@ return require('packer').startup(function(use)
 
   use { 'junegunn/fzf', run = 'call fzf#install()' }
 
-  use 'jiangmiao/auto-pairs'
+  use {	'windwp/nvim-autopairs',
+    config = function() require("nvim-autopairs").setup {} end }
   use 'antonk52/vim-tabber'
   use 'psliwka/vim-smoothie'
   use 'junegunn/vim-easy-align'
