@@ -123,4 +123,7 @@ return require('packer').startup(function(use)
   use 'crispybaccoon/fantastic.vim'
   use 'crispybaccoon/dawn.vim'
 
+  if is_bootstrap then
+    require('packer').sync()
+  end
 end)
