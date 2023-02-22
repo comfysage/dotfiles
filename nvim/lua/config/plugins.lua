@@ -84,7 +84,7 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'sharkdp/fd'
-  use 'numToStr/Comment.nvim'
+  use { 'numToStr/Comment.nvim', as = 'commentary' }
 
   -- LSP
   use { -- LSP Configuration & Plugins
