@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
     requires = { 'rbgrouleff/bclose.vim' } }
 
   use { 'junegunn/fzf', run = 'call fzf#install()' }
-  use 'junegunn/fzf.vim'
 
   use 'jiangmiao/auto-pairs'
   use 'antonk52/vim-tabber'
