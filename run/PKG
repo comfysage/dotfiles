@@ -15,6 +15,7 @@ packages=(
  pulseaudio alsa-utils
  # dev
  go
+ make ninja
  # UI
  alacritty
  bspwm
