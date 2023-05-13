@@ -2,9 +2,8 @@
 
 mkdir -p ~/.local/bin/
 
-curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/DOT -o ~/.local/bin/dot && sh ~/.local/bin/DOT
+export DOT_GIT=https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega
 
-curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/coffee -o ~/.local/bin/coffee
-curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/COFFEE.run.sh -o ~/.local/bin/coffee.run.sh && sh ~/.local/bin/coffee.run.sh
+sh -c $( curl -L ${DOT_GIT}/run/PKG )
 
-curl -L https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega/run/PKG -o ~/.local/bin/pkg && sh ~/.local/bin/PKG
+sh -c $( curl -L ${DOT_GIT}/run/DOT )

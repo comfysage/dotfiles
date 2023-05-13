@@ -1,19 +1,23 @@
 #!/usr/bin/env bash
 
-# get stew
-echo "> INSTALLING STEW <"
-git clone https://github.com/crispybaccoon/stew.git ~/stew &&\
-cd ~/stew &&\
-make
+# get hayashi
+echo "> INSTALLING HAYASHI <"
+sh -c $( curl -L https://raw.githubusercontent.com/CrispyBaccoon/hayashi/mega/install.sh )
+
+echo "> INSTALLING HAYASHI PACKAGES < "
+hayashi config init
+hayashi add niru
+hayashi add neovim
+hayashi add tmux
+hayashi add ohmyzsh
 
 # get dotfiles
 echo "> CLONING DOTFILES <"
-git clone https://github.com/crispybaccoon/dotfiles.git ~/.stew
+cd
+git clone https://github.com/crispybaccoon/dotfiles.git ~/.link
 
-# setup stewrc
-mkdir -p ~/.config/stew
-ln -s ~/.stew/stewrc ~/.config/stew/
+# setup niru
+ln -s ~/.link/niru.yaml ~/.niru
 
-# CALL STEW #
 echo "> LINKING DOTFILES <"
-stew setup
+niru pull

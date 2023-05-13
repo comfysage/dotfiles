@@ -2,27 +2,28 @@
 
 # YAY
 cd
-sudo pacman -S base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm
 
 # Packages
 cd
 packages=(
  # main
+ base-devel
+ git
  xorg
  zsh-git
+ pulseaudio alsa-utils
  # dev
- node
- npm
+ go
  # UI
  alacritty
  bspwm
  openbox
- feh
+ hsetroot
  # application
  ranger
  )
 
-yay -S ${packages[@]}
+paru --noconfirm -Syu ${packages[@]}
+
+chsh -s $(which zsh)
