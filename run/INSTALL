@@ -4,6 +4,6 @@ mkdir -p ~/.local/bin/
 
 export DOT_GIT=https://raw.githubusercontent.com/CrispyBaccoon/dotfiles/mega
 
-sh -c $( curl -L ${DOT_GIT}/run/PKG )
+curl -fsSL ${DOT_GIT}/run/PKG | sh
 
-sh -c $( curl -L ${DOT_GIT}/run/DOT )
+curl -fsSL ${DOT_GIT}/run/DOT | sh

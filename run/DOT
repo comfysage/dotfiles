@@ -2,7 +2,7 @@
 
 # get hayashi
 echo "> INSTALLING HAYASHI <"
-sh -c $( curl -L https://raw.githubusercontent.com/CrispyBaccoon/hayashi/mega/install.sh )
+curl -fsSL https://raw.githubusercontent.com/CrispyBaccoon/hayashi/mega/install.sh | sh
 
 echo "> INSTALLING HAYASHI PACKAGES < "
 hayashi config init
