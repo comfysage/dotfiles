@@ -1,67 +1,66 @@
-path: 
-  items:
-    - source: ~/.stewrc
-      target: stewrc
-    - source: ~/.config/alacritty
-      target: alacritty
-    - source: ~/.config/awesome
-      target: awesome
-    - source: ~/.config/bspwm
-      target: bspwm
-    - source: ~/.config/cava
-      target: cava
-    - source: ~/.config/dunst
-      target: dunst
-    - source: ~/.config/fzf
-      target: fzf
-    - source: ~/.config/htop
-      target: htop
-    - source: ~/.config/i3
-      target: i3
-    - source: ~/.moc
-      target: moc
-    - source: ~/.config/mpd/playlists
-      target: mpd/playlists
-    - source: ~/.config/mpd/mpd.conf
-      target: mpd/mpd.conf
-    - source: ~/.config/ncmpcpp
-      target: ncmpcpp
-    - source: ~/.config/neofetch
-      target: neofetch
-    - source: ~/.config/nvim
-      target: nvim
-    - source: ~/.config/openbox
-      target: openbox
-    - source: ~/.config/picom
-      target: picom
-    - source: ~/.config/polybar
-      target: polybar
-    - source: ~/.config/ranger
-      target: ranger
-    - source: ~/.config/rofi
-      target: rofi
-    - source: ~/.config/sxhkd
-      target: sxhkd
-    - source: ~/.themes
-      target: themes
-    - source: ~/.tmux/plugins
-      target: tmux-plugins
-    - source: ~/.config/X11
-      target: X11
-    - source: ~/.gitconfig
-      target: gitconfig
-    - source: ~/.tmux.conf
-      target: tmux.conf
-    - source: ~/.zshrc
-      target: zshrc
-    - source: .zsh_history
-      target: zsh_history
-    - source: .config/lsd
-      target: lsd
-    - source: /home/comfy/.config/qutebrowser
-      target: qutebrowser
-    - source: /home/comfy/.config/dwm/autostart.sh
-      target: dwm-autostart
-    - source: /home/comfy/.vim
-      target: .vim
-
+path:
+items:
+  - source: ~/.stewrc
+    target: stewrc
+  - source: ~/.config/alacritty
+    target: alacritty
+  - source: ~/.config/awesome
+    target: awesome
+  - source: ~/.config/bspwm
+    target: bspwm
+  - source: ~/.config/cava
+    target: cava
+  - source: ~/.config/dunst
+    target: dunst
+  - source: ~/.config/fzf
+    target: fzf
+  - source: ~/.config/htop
+    target: htop
+  - source: ~/.config/i3
+    target: i3
+  - source: ~/.moc
+    target: moc
+  - source: ~/.config/mpd/playlists
+    target: mpd/playlists
+  - source: ~/.config/mpd/mpd.conf
+    target: mpd/mpd.conf
+  - source: ~/.config/ncmpcpp
+    target: ncmpcpp
+  - source: ~/.config/neofetch
+    target: neofetch
+  - source: ~/.config/nvim
+    target: nvim
+  - source: ~/.config/openbox
+    target: openbox
+  - source: ~/.config/picom
+    target: picom
+  - source: ~/.config/polybar
+    target: polybar
+  - source: ~/.config/ranger
+    target: ranger
+  - source: ~/.config/rofi
+    target: rofi
+  - source: ~/.config/sxhkd
+    target: sxhkd
+  - source: ~/.themes
+    target: themes
+  - source: ~/.tmux/plugins
+    target: tmux-plugins
+  - source: ~/.config/X11
+    target: X11
+  - source: ~/.gitconfig
+    target: gitconfig
+  - source: ~/.tmux.conf
+    target: tmux.conf
+  - source: ~/.zshrc
+    target: zshrc
+  - source: .zsh_history
+    target: zsh_history
+  - source: .config/lsd
+    target: lsd
+  - source: /home/comfy/.config/qutebrowser
+    target: qutebrowser
+  - source: /home/comfy/.config/dwm/autostart.sh
+    target: dwm-autostart
+  - source: /home/comfy/.vim
+    target: .vim
