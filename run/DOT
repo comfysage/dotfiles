@@ -3,9 +3,9 @@
 # get hayashi
 echo "> INSTALLING HAYASHI <"
 curl -fsSL https://raw.githubusercontent.com/CrispyBaccoon/hayashi/mega/install.sh | sh
+export PATH="${PATH}:$HOME/.hayashi/pack/bin"
 
 echo "> INSTALLING HAYASHI PACKAGES < "
-hayashi config init
 hayashi add niru
 hayashi add neovim
 hayashi add tmux
