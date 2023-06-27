@@ -15,11 +15,11 @@ packages=(
  pulseaudio alsa-utils
  # dev
  go
- make ninja
+ cmake make ninja
  # UI
  alacritty
  bspwm
- openbox
+ sxhkd
  hsetroot
  # application
  ranger
