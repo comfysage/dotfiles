@@ -1,3 +1,15 @@
+CR = CR or "~/.config"
+
+ENV = function(v)
+    if not vim.fn.has_key(vim.fn.environ(), v) then
+        return ""
+    end
+    return vim.fn.environ()[v]
+end
+
+CR_PATH = function (v)
+    return CR .. "/" .. v
+end
 
 P = function (v)
  print(vim.inspect(v))
@@ -17,14 +29,15 @@ V = function ()
  vim.ui.input({ prompt = '' }, function (name)
   local sp = vim.split(name, ".", { plain = true, trimempty = true })
 
-  local basepath = '/mnt/d/home/kitchen/config/nvim/'
+  local basepath = CR_PATH 'nvim'
   local p = ''
 
   for i, n in pairs(sp) do
-   if i == table.getn(sp) then
-    p = p .. n .. '*'
-   else 
-    p = p .. n .. '/'
+    p = p .. "/"
+   if i == #sp then
+    p = p .. n .. '.lua'
+   else
+    p = p .. n
    end
   end
 
