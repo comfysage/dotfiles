@@ -1,75 +1,57 @@
-
-vim.cmd([[ syntax on ]])
-
-vim.opt.encoding="utf-8"
-vim.opt.spelllang:append { "en_gb", "fr" }
-vim.opt.mouse= "nv"
-
--- settings {{{
-
--- basic UI
-vim.opt.errorbells = false
-vim.opt.cursorline = false
-vim.opt.relativenumber = false
-vim.opt.number = true
-vim.opt.numberwidth = 5
-vim.opt.smarttab = true
-vim.opt.conceallevel = 2
-
-vim.opt.shortmess="filnrxoOtTIF"
-
 -- When editing vim and markdown files don't show numbers
-vim.cmd [[ au BufReadPost,BufRead,BufNewFile *.vim set nonu ]]
-vim.cmd [[ au BufReadPost,BufRead,BufNewFile *.markdown set nonu ]]
---// let g:vim_markdown_follow_anchor = 1
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = { '*.vim', '*.md' },
+  callback = function ()
+    vim.opt_local.number = false
+  end,
+  desc = 'remove line numbers',
+})
 
--- indention
-vim.opt.cindent = true
-vim.opt.smartindent = true
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  callback = function ()
+    vim.cmd('startinsert')
+  end,
+  desc = 'start insert mode on TermOpen',
+})
 
--- no tab indention
-vim.opt.tabstop = 1
-vim.opt.softtabstop = 1
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-
--- Lifecycle
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.cmd [[ set undodir=~/.undodir ]]
-vim.opt.undofile = true
-vim.opt.hidden = true
-
--- Searching
-vim.opt.incsearch = true
-vim.opt.hlsearch = false
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- Scrolling
-vim.opt.scrolloff = 5
-
--- Folding
-vim.opt.foldenable = true
-vim.opt.foldlevelstart = 0
-vim.opt.foldnestmax = 4
-vim.opt.foldmethod = "marker"
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  callback = function ()
+    vim.opt_local.number = false
+  end,
+  desc = 'remove line numbers',
+})
 
 -- RPC Server
 
-vim.cmd [[
-function! IsServer()
-  return serverlist() == ['/tmp/vi.pipe']
-endfunction ]]
+local is_server = function ()
+  local sl = vim.fn.serverlist()
+  return vim.tbl_contains(sl, '/tmp/vi.pipe')
+end
 
-vim.cmd [[
-function! QuitServer()
-  if IsServer()
-    call system("rm $VISERVER")
-  endif
-endfunction ]]
+local quit_server = function ()
+  if is_server() then
+    vim.fn.system { 'rm', '/tmp/vi.pipe' }
+  end
+end
 
-vim.cmd [[autocmd VimLeavePre * call QuitServer()]]
+local server_au_id = vim.api.nvim_create_augroup('RPCServer', { clear = true })
+vim.api.nvim_create_autocmd('UIEnter', {
+  once = true,
+  group = server_au_id,
+  callback = function ()
+    if is_server() then
+      vim.api.nvim_create_autocmd('VimLeavePre', {
+        once = true,
+        group = server_au_id,
+        callback = function ()
+          quit_server()
+        end
+      })
+    end
+  end
+})
 
 -- mkdir path
 
@@ -104,16 +86,28 @@ endfunction
 nnoremap <leader>x :<C-U>call StripTrailingWhitespace()<CR>
 ]]
 
--- }}}
-
 -- statusline
-vim.cmd [[ command! -nargs=0 ToggleStatusLine if &ls == 0 | set ls=3 | set ch=1 | else | set ls=0 | set ch=0 | endif ]]
-
--- window splits
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.api.nvim_create_user_command('ToggleStatusLine', function()
+  if vim.api.nvim_get_option('laststatus') == 0 then
+    vim.opt.laststatus = 3
+    vim.opt.cmdheight = 1
+  else
+    vim.opt.laststatus = 0
+    vim.opt.cmdheight = 0
+  end
+end, {})
 
 -- netrw
 vim.g.netrw_liststyle = 3
 vim.cmd [[hi! link netrwTreeBar NonText]]
 
+-- wsl yank support
+vim.cmd [[
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+  augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# '*' | echo v:event | call system(s:clip, @0) | endif
+  augroup END
+endif
+]]

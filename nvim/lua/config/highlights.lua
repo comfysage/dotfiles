@@ -35,11 +35,20 @@ function! SynStack()
   endif
   let s:val = map(synstack(line("."), col(".")), 'synIDattr(v:val, "name")')
   echo s:val 
-  echo " > " .. synIDattr(synIDtrans(hlID(s:val[len(s:val) - 1])), "name")
+  let s:hl = synIDattr(synIDtrans(hlID(s:val[len(s:val) - 1])), "name")
+  echohl s:hl | echo s:hl | echohl None
 endfunc ]])
+
+vim.api.nvim_create_user_command('SynStack', function ()
+  if not vim.fn.exists("*synstack") then
+    return
+  end
+  local val = vim.fn.map(vim.fn.synstack(vim.fn.line("."), vim.fn.col(".")), 'synIDattr(v:val, "name")')
+  local hl = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(val[#val])), "name")
+  P (val)
+  vim.cmd ( 'echohl ' .. hl ..  ' | echo "' ..  hl ..  '" | echohl None' )
+end, {})
 
 vim.keymap.set("n", "<leader>sp", ":call SynStack()<CR>")
 
--- colorscheme
-
-vim.cmd [[ colorscheme gruvboxed ]]
+vim.cmd [[ hi clear SpellCap ]]
