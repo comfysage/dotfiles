@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+bspc rule -a \* state=pseudo_tiled
+
+bspc rule -a Spotify state=tiled desktop='^9'
+
+#bspc rule -a Org.gnome.Nautilus state=floating
+#bspc rule -a forest state=floating
+#bspc rule -a Docky layer=above manage=on border=off focus=off locked=on
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Chromium desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+
