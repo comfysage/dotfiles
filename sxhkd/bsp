@@ -84,6 +84,8 @@ super + {_,shift + }c
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
+super + ctrl + {Left,Right}
+	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -104,21 +106,21 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + alt + {h,j,k,l}
 	bspc node -p {west,south,north,east}
-super + ctrl + {Left,Down,Up,Right}
+super + alt + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-super + ctrl + {1-9}
+super + alt + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
+super + alt + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
+super + alt + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
