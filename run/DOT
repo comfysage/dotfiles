@@ -7,6 +7,7 @@ export PATH="${PATH}:$HOME/.hayashi/pack/bin"
 
 echo "> INSTALLING HAYASHI PACKAGES < "
 hayashi add rust
+export PATH="${PATH}:$HOME/.cargo/bin"
 hayashi add niru
 hayashi add neovim
 hayashi add tmux
