@@ -115,7 +115,7 @@ end
 
 -- Dotfile Finder
 function M.edit_dotfiles()
-  require('comfy.telescope').explorer({
+  M.explorer({
     -- cwd = '~/.config/nvim',
     cwd = '/mnt/d/home/kitchen/config/nvim',
   })
@@ -124,7 +124,7 @@ end
 -- Edit Markdown Notes
 
 function M.edit_notes()
-  require('comfy.telescope').explorer({
+  M.explorer({
     cwd = '/mnt/d/home/kitchen/Dropbox/notes/',
   })
 end
