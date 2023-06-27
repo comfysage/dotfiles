@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+bspc config top_padding         45
+bspc config bottom_padding       0
+
+/mnt/d/bin/polylaunch bar/gruvboxed-adachi gruvboxed-top
