@@ -64,5 +64,5 @@ require'FTerm'.setup({
 })
 
 -- Example keybindings
-vim.keymap.set('n', '<space>w', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<space>w', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('n', ',w', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', ',w', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')

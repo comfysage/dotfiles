@@ -1,18 +1,27 @@
 local status, _ = pcall(require, 'telescope')
 if not status then return end
-status, _ = pcall(require, 'lspkind')
+local status, lspkind = pcall(require, 'config.plugin.lspkind')
 if not status then return end
+
+vim.g.indentLine_conceallevel = 2
+vim.g.indentLine_concealcursor = "inc"
 
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
-local lspkind = require 'lspkind'
 
 cmp.setup {
+  window = {
+    completion = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      col_offset = 0,
+      side_padding = 1,
+    },
+  },
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
       -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
       -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
       -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
     end,
@@ -41,7 +50,7 @@ cmp.setup {
     { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
     -- { name = 'vsnip', max_item_count = 4 }, -- For vsnip users.
-    { name = 'luasnip', max_item_count = 4 }, -- For luasnip users.
+    -- { name = 'luasnip', max_item_count = 4 }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
   }, {
@@ -50,20 +59,12 @@ cmp.setup {
     { name = 'buffer', max_item_count = 5 },
   }),
   formatting = {
-    format = lspkind.cmp_format {
-      with_text = true,
-      menu = {
-        buffer = "[buf]",
-        nvim_lsp = "[LSP]",
-        nvim_lua = "[lua]",
-        path = "[path]",
-        luasnip = "[snip]",
-      }
-    }
+    fields = { 'abbr', 'kind', 'menu' },
+    format = lspkind.format
   },
   -- view = { entries = 'native' },
   experimental = {
-    ghost_text = true,
+    -- ghost_text = true,
   }
 }
 
@@ -78,7 +79,7 @@ cmp.setup.filetype('gitcommit', {
 
 cmp.setup.filetype('markdown', {
   sources = cmp.config.sources({
-    { name = 'luasnip', max_item_count = 4 }, -- For luasnip users.
+    -- { name = 'luasnip', max_item_count = 4 }, -- For luasnip users.
   }, {
     { name = 'path' },
     { name = 'buffer', max_item_count = 5 },
@@ -88,6 +89,7 @@ cmp.setup.filetype('markdown', {
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
+  view = { entries = 'wildmenu' },
   sources = {
     { name = 'buffer' }
   }
@@ -132,7 +134,7 @@ require("cmp_dictionary").setup({
 	first_case_insensitive = false,
 	document = false,
 	document_command = "wn %s -over",
-	async = false, 
+	async = false,
 	max_items = -1,
 	capacity = 5,
 	debug = false,

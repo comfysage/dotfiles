@@ -1,3 +1,4 @@
+if true then return end
 
 vim.g.airline_powerline_fonts = 0
 vim.g.airline_mode_map = {
@@ -20,6 +21,8 @@ vim.g.airline_mode_map = {
     ['V']      = 'V',
     ['']     = 'V',
     }
+
+vim.g.airline_section_a = '%#__accent_bold#%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(airline#extensions#keymap#status(),0)}%{airline#util#append(airline#parts#spell(),0)}%{airline#util#append("",0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}'
 
 vim.g['airline#extensions#wordcount#formatter#default#fmt'] = 'W %s'
 
@@ -57,4 +60,4 @@ vim.g.airline_section_c = '%<%<%{expand("%:t")}%m %#__accent_red#%{airline#util#
 -- Disable Airline
 -- vim.g.airline_disable_statusline = 1
 
-vim.cmd [[ AirlineRefresh ]]
+--vim.cmd [[ AirlineRefresh ]]

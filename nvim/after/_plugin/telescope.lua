@@ -7,7 +7,7 @@ require('telescope').setup{
   defaults = {
     prompt_prefix = '$ ',
     file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-    file_ignore_patterns = {"node_modules", "\\.git"},
+    file_ignore_patterns = {"node_modules", "%.git/"},
     borderchars = {
       { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
       prompt = {"─", "│", "─", "│", '┌', '┐', "┘", "└"},
@@ -29,9 +29,14 @@ extensions = {
                                        -- the default case_mode is "smart_case"
     },
     file_browser = {
-      hijack_netrw = true,
+      hijack_netrw = false,
     },
-  }
+  },
+  pickers = {
+    find_files = {
+      disable_devicons = true
+    },
+  },
 }
 
 -- Extensions
@@ -39,22 +44,3 @@ extensions = {
 require 'telescope' .load_extension 'fzf'
 require 'telescope' .load_extension 'file_browser'
 
--- Custom
-
-vim.keymap.set("n", "<space>t", ":Telescope<CR>")
-vim.keymap.set("n", "<space><space>", "<cmd>lua require'config.plugin.telescope'.space{}<CR>")
-vim.keymap.set("n", "<space>fr", "<cmd>lua require'config.plugin.telescope'.grep{}<CR>")
-vim.keymap.set("n", "<space>fv", "<cmd>lua require'config.plugin.telescope'.edit_dotfiles()<CR>")
-vim.keymap.set("n", "<space>ff", "<cmd>lua require'config.plugin.telescope'.explorer{}<CR>")
-vim.keymap.set("n", "<space>/", "<cmd>lua require'config.plugin.telescope'.grep_current_file{}<CR>")
-
-vim.keymap.set("n", "<space>fs", "<cmd>lua require'config.plugin.telescope'.symbols{}<CR>")
-vim.keymap.set("n", "<space>fg", "<cmd>lua require'config.plugin.telescope'.git_files{}<CR>")
-
--- file_browser ( use Shift-Enter to create from prompt )
-vim.keymap.set("n", "<space>fd", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>")
-
-vim.keymap.set("n", "<space>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>")
-vim.keymap.set("n", "<space>ft", "<cmd>lua require('telescope.builtin').filetypes()<CR>")
-
-vim.keymap.set("n", "<C-t>", "<cmd>lua require('telescope.builtin').colorscheme()<CR>")

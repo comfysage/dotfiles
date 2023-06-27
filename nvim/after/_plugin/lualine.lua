@@ -1,3 +1,4 @@
+if true then return end
 local status, _ = pcall(require, 'lualine')
 if not status then return end
 
