@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+# defaults
+# ========
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+
+export COLORTERM=truecolor
+export TERM="xterm-256color"
+# [[ -f /usr/bin/zsh ]] && export SHELL=$(which zsh)
+export player="mpd"
+
+PATH=/usr/local/bin:$PATH
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+export PATH="$PATH"
+
+# kitchen
+# =======
+
+export KITCHEN="/mnt/d/kitchen"
+export CONFIGPATH="$KITCHEN/config"
+
+[[ -d "$KITCHEN/bin" ]] && PATH=$KITCHEN/bin:$PATH
+
+[[ -d "$HOME/llvm-project/build/bin" ]] && PATH="$PATH:$HOME/llvm-project/build/bin"
+
+[[ -f "$CONFIGPATH/make.conf" ]] && source "$CONFIGPATH/make.conf"
+
+# applications
+# ============
+
+# go
+
+export GOPATH=$HOME/go
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
+
+# deno
+
+export DENO_INSTALL="/home/comfy/.deno"
+export PATH="$PATH:$DENO_INSTALL/bin"
+
+# cargo
+
+. "$HOME/.cargo/env"
+
+# rbenv
+
+if command -v rbenv &> /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
+
+# hayashi
+
+# export PATH="$PATH:$HOME/.hayashi/pack/bin"
+eval "$($HOME/.hayashi/pack/bin/hayashi env)"
+
+# fzf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
