@@ -1,0 +1,24 @@
+
+! adachi
+*.foreground: #d1d7da
+*.background: #20202a
+*.cursorColor: #e3bfaf
+
+*.color0:  #20202a
+*.color8:  #393b4d
+*.color1:  #ebb9bc
+*.color9:  #d18e92
+*.color2:  #c0d1a5
+*.color10: #9cb888
+*.color3:  #e6deb6
+*.color11: #dbcb95
+*.color4:  #b9ddeb
+*.color12: #90c5d3
+*.color5:  #ebb9de
+*.color13: #d19bbc
+*.color6:  #b1e0c5
+*.color14: #90c3a6
+*.color7:  #646d85
+*.color15: #7e8ba3
+
+! vim: ft=xdefaults
