@@ -3,7 +3,7 @@ is_git_repo() {
 }
 
 has_upstream() {
-  git remote > /dev/null 2>&1
+   ! [[ -z $(git remote) ]]
 }
 
 _gb() {
