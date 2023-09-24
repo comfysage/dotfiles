@@ -32,7 +32,7 @@ bspc config gapless_monocle      false
 xrandr --output Virtual1 --mode 1920x1080
 /mnt/d/bin/picomlaunch bsp
 # /mnt/d/bin/polylaunch gruvboxed gruvboxed-bottom
-/mnt/d/home/kitchen/config/polybar/scripts/gruvboxed
+~/.config/polybar/scripts/gruvboxed
 /mnt/d/bin/switch gruvbox
 
 /home/comfy/.ww

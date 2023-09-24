@@ -31,8 +31,8 @@ bspc config gapless_monocle      false
 # vmhgfs-fuse .host:/d /mnt/d
 xrandr --output Virtual1 --mode 1920x1080
 /mnt/d/bin/picomlaunch bsp
-/mnt/d/home/kitchen/config/polybar/scripts/fantastic-gruvboxed
 /mnt/d/bin/switch gruvbox
+~/.config/polybar/scripts/adachi
 
 /home/comfy/.ww
 #/mnt/d/bin/rw /mnt/d/home/kitchen/pictures/mut-ex-wallpapers/
