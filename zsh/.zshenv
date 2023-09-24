@@ -6,3 +6,4 @@ source ~/.comfy_env
 
 
 if [ -e /home/comfy/.nix-profile/etc/profile.d/nix.sh ]; then . /home/comfy/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. "$HOME/.cargo/env"

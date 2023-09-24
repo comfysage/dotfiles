@@ -27,6 +27,8 @@ fi
 
 export PATH="$PATH"
 
+export ZDOTDIR=$HOME/.config/zsh
+
 # kitchen
 # =======
 
