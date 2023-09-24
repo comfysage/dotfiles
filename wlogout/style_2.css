@@ -1,0 +1,85 @@
+* {
+    background-image: none;
+    font-size: 20px;
+}
+
+@import "main_style.css";
+
+window {
+    background-color: rgba(0,0,0,0.5);
+}
+
+button {
+    color: black;
+    background-color: @main-color;
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+}
+
+button:focus {
+    background-color: @wb-act-bg;
+    background-size: 20%;
+}
+
+button:hover {
+    background-color: @wb-hvr-bg;
+    background-size: 25%;
+    border-radius: 30px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+button:hover#lock {
+    border-radius: 30px 30px 0px 30px;
+    margin : 32px 0px 0px 648px;
+}
+
+button:hover#logout {
+    border-radius: 30px 0px 30px 30px;
+    margin : 0px 0px 32px 648px;
+    background-color: @level-warn;
+}
+
+button:hover#shutdown {
+    border-radius: 30px 30px 30px 0px;
+    margin : 32px 648px 0px 0px;
+    background-color: @level-shutdown;
+}
+
+button:hover#reboot {
+    border-radius: 0px 30px 30px 30px;
+    margin : 0px 648px 32px 0px;
+    background-color: @level-shutdown;
+}
+
+#lock {
+    background-image: image(url("/home/comfy/.config/wlogout/icons/lock_dark.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    border-radius: 48px 0px 0px 0px;
+    margin : 86px 0px 0px 702px;
+}
+
+#logout {
+    background-image: image(url("/home/comfy/.config/wlogout/icons/logout_dark.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    border-radius: 0px 0px 0px 48px;
+    margin : 0px 0px 86px 702px;
+}
+
+#shutdown {
+    background-image: image(url("/home/comfy/.config/wlogout/icons/shutdown_dark.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    border-radius: 0px 48px 0px 0px;
+    margin : 86px 702px 0px 0px;
+}
+
+#reboot {
+    background-image: image(url("/home/comfy/.config/wlogout/icons/reboot_dark.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 0px 48px 0px;
+    margin : 0px 702px 86px 0px;
+}
