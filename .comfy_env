@@ -63,12 +63,6 @@ export PATH="$PATH:$DENO_INSTALL/bin"
 
 . "$HOME/.cargo/env"
 
-# rbenv
-
-if command -v rbenv &> /dev/null; then
-  eval "$(rbenv init - zsh)"
-fi
-
 # hayashi
 
 # export PATH="$PATH:$HOME/.hayashi/pack/bin"
@@ -77,3 +71,11 @@ eval "$($HOME/.hayashi/pack/bin/hayashi env)"
 # fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# rbenv
+
+if command -v rbenv &> /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
+
+export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
