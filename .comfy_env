@@ -79,3 +79,5 @@ if command -v rbenv &> /dev/null; then
 fi
 
 export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
+
+export LAKE_DIR="$KITCHEN/botanic"
