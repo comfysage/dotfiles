@@ -1,9 +1,9 @@
     "custom/wallchange": {
         "format": "{}",
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "~/.config/hypr/scripts/swwwallpaper.sh -n",
-        "on-click-right": "~/.config/hypr/scripts/swwwallpaper.sh -p",
-        "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/swwwallselect.sh",
+        "on-click": "wallctl r",
+        "on-click-right": "~/.config/hypr/scripts/wallselect",
+        "on-click-middle": "wallctl set",
         "interval" : 86400, // once every day
         "tooltip": true
     },
