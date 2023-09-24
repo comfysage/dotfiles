@@ -1,0 +1,24 @@
+
+! Aki
+*.foreground: #EBEBE3
+*.background: #252531
+*.cursorColor: #EBEBE3
+
+*.color0: #252531
+*.color8: #4B4C66
+*.color1: #CA797E
+*.color9: #CA797E
+*.color2: #A5C79F
+*.color10: #9BC2B1
+*.color3: #E6B87F
+*.color11: #E69E87
+*.color4: #93B9BD
+*.color12: #8CA1B8
+*.color5: #ABADD0
+*.color13: #AD8DBD
+*.color6: #A1C3CC
+*.color14: #AF6672
+*.color7: #EBEBE3
+*.color15: #DFDFD5
+
+! vim: ft=xdefaults

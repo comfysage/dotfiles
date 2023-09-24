@@ -1,0 +1,26 @@
+
+! Evergarden
+*.foreground: #D3C6AA
+*.background: #272E32
+! *.background: #141b1f
+*.cursorColor: #A7C080
+! *.cursorColor: #C7E0A0
+
+*.color0:  #272E32
+*.color8:  #343E44
+*.color1:  #E67E80
+*.color9:  #E67E80
+*.color2:  #A7C080
+*.color10: #A7C080
+*.color3:  #DBBC7F
+*.color11: #E69875
+*.color4:  #7FBBB3
+*.color12: #7FBBB3
+*.color5:  #D699B6
+*.color13: #D699B6
+*.color6:  #83C092
+*.color14: #83C092
+*.color7:  #D3C6AA
+*.color15: #859289
+
+! vim: ft=xdefaults
