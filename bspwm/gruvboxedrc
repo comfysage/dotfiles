@@ -35,7 +35,7 @@ xrandr --output Virtual1 --mode 1920x1080
 ~/.config/polybar/scripts/gruvboxed
 /mnt/d/bin/switch gruvbox
 
-/home/comfy/.ww
+[[ -f ~/.ww ]] && ~/.ww || ww $KITCHEN/pictures/vibrant/isitmyescape.jpg
 #/mnt/d/bin/rw /mnt/d/home/kitchen/pictures/mut-ex-wallpapers/
 killall dunst; dunst &
 
