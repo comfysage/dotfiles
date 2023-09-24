@@ -1,0 +1,10 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono NF";
+  show-icons: true;
+  //icon-theme: "Papirus";//
+}
+
+@theme "~/.config/rofi/themes/theme"
