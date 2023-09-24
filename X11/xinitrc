@@ -9,6 +9,8 @@ fi
 
 /mnt/d/bin/sxhkdlaunch &
 
+xset b off
+
 /mnt/d/bin/xrdbload
 xsetroot -cursor_name left_ptr
 [[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap
