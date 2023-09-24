@@ -1,0 +1,12 @@
+# aki
+[colors]
+foreground = "#8383A5"
+background = "#252531"
+cursor_bg = "#B4B4AC"
+cursor_border = "#EBEBE3"
+cursor_fg = "#e0def4"
+selection_bg = "#EBEBE3"
+selection_fg = "#252531"
+
+ansi =    ["#252531", "#CA797E", "#A5C79F", "#E6B87F", "#93B9BD", "#ABADD0", "#A1C3CC", "#EBEBE3"]
+brights = ["#4B4C66", "#CA797E", "#9BC2B1", "#E69E87", "#8CA1B8", "#AD8DBD", "#AF6672", "#DFDFD5"]

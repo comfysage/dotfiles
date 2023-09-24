@@ -1,0 +1,12 @@
+# evergarden
+[colors]
+foreground = "#D3C6AA"
+background = "#141b1f"
+cursor_bg = "#A7C080"
+cursor_border = "#EBEBE3"
+cursor_fg = "#141b1f"
+selection_bg = "#A7C080"
+selection_fg = "#141b1f"
+
+ansi =    ["#141b1f", "#E67E80", "#A7C080", "#DBBC7F", "#7FBBB3", "#D699B6", "#83C092", "#D3C6AA"]
+brights = ["#343E44", "#E67E80", "#A7C080", "#E69875", "#7FBBB3", "#D699B6", "#83C092", "#859289"]
