@@ -1,28 +1,25 @@
-// Config //
+@import "~/.config/rofi/select.rasi"
+
+/*****----- Configuration -----*****/
 configuration {
 	modi:                        "drun";
-	show-icons:                  true;
-    drun-display-format:         "{name}";
-	font:                        "JetBrainsMono Nerd Font 10";
 }
 
-@theme "~/.config/rofi/themes/theme.rasi"
-
-
-// Main //
+/*****----- Main Window -----*****/
 window {
     enabled:                     true;
     fullscreen:                  false;
-    width:                       100%;
+    width:                       96%;
     transparency:                "real";
     cursor:                      "default";
     spacing:                     0px;
     padding:                     0px;
-    border:                      0px;
-    border-radius:               0px;
-    border-color:                transparent;
+    /* border:                      0px; */
+    /* border-radius:               0px; */
+    /* border-color:                transparent; */
     background-color:            transparent;
 }
+/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     children:                    [ "listview" ];

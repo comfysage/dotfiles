@@ -2,9 +2,11 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono NF";
+  /* font: "JetBrainsMono NF"; */
+  font: "JetBrainsMono NF 11";
   show-icons: true;
-  //icon-theme: "Papirus";//
+  icon-theme: "Papirus";
+  click-to-exit:          true;
 }
 
 @theme "~/.config/rofi/themes/theme"

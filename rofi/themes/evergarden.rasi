@@ -1,12 +1,12 @@
 * {
-color-bg: #273232;
+color-bg: #141b1f;
 color-fg: #D3C6AA;
 color0: #E67E80;
 color8: #E67E80;
-color1: #DBBC7F;
-color9: #E69875;
-color2: #A7C080;
-color10: #A7C080;
+color1: #A7C080;
+color9: #A7C080;
+color2: #DBBC7F;
+color10: #E69875;
 color3: #7FBBB3;
 color11: #7FBBB3;
 color4: #D699B6;
@@ -43,12 +43,12 @@ color15: #9DA9A0;
   alternate-urgent-background: @urgent-background;
   alternate-active-background: @active-background;
 
-  selected-normal-background:  @color6; //Lavender
+  selected-normal-background:  @color10; //Lavender
   selected-urgent-background:  #94e2d5; //Teal
   selected-active-background:  @color7; //Maroon
 
 	separatorcolor:              transparent;
-  border-color:                transparent;
+  border-color:                @color9;
 	border-radius:               12px;
   border:                      2px;
 	spacing:                     0px;

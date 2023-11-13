@@ -1,25 +1,6 @@
-/* Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com> */
-/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
-
-/* * { */
-/* 	background:			#011826; */
-/* 	background-alt:		#0A2332; */
-/* 	foreground:			#EEEEEE; */
-/* 	selected:			#D97E96; */
-/* 	urgent:				#635373; */
-/* 	on:					#496886; */
-/* 	off:				#A36584; */
-/* } */
-
 * {
-	background:			#1d2021;
-	background-alt:		#1d2021;
-	foreground:			#fbf1c7;
-	selected:			#8bba7f;
-	urgent:				#f2594b;
-	on:					#8bba7f;
-	off:				#c6b396;
-	cursorColor: #fe8019;
+	color-bg:			#1d2021;
+	color-fg:			#fbf1c7;
 	color0: #1d2021;
 	color8: #555148;
 	color1: #f2594b;
@@ -36,4 +17,40 @@
 	color14: #89b482;
 	color7: #c6b396;
 	color15: #e2cca9;
+}
+
+* {
+  foreground: #D3C6AA;
+  normal-foreground:           @foreground;
+  urgent-foreground:           #11111bff; //Crust
+  active-foreground:           #11111bff; //Crust
+
+  alternate-normal-foreground: @normal-foreground;
+  alternate-urgent-foreground: @urgent-foreground;
+  alternate-active-foreground: @active-foreground;
+
+  selected-normal-foreground:  #11111bff; //Crust
+  selected-urgent-foreground:  #11111bff; //Crust
+  selected-active-foreground:  #11111bff; //Crust
+
+  background: #273232;
+  background-alt: #273232;
+  normal-background:           @background;
+  urgent-background:           #eba0accc; //Maroon
+  active-background:           #94e2d5cc; //Teal
+
+  alternate-normal-background: #f5c2e7ff;
+  alternate-urgent-background: @urgent-background;
+  alternate-active-background: @active-background;
+
+  selected-normal-background:  @color9; //Lavender
+  selected-urgent-background:  #94e2d5; //Teal
+  selected-active-background:  @color7; //Maroon
+
+	separatorcolor:              transparent;
+  border-color:                @color10;
+	border-radius:               12px;
+  border:                      2px;
+	spacing:                     0px;
+	padding:                     0px;
 }

@@ -10,5 +10,5 @@ rofi \
 	-drun-match-fields all \
 	-drun-display-format "{name}" \
 	-no-drun-show-actions \
-	-terminal wezterm \
+	-terminal $TERMINAL \
 	-theme "$DIR"/launcher.rasi
