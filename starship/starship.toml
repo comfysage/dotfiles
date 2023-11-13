@@ -47,12 +47,12 @@ ahead =	"⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 up_to_date = "  "
-untracked = "[?${count}](fg:surface2)"
-stashed = ""
-modified = "[~${count}](fg:yellow)"
+untracked = "[?${count}](fg:15 bg:base)"
+stashed = ""
+modified = "[~${count}](fg:yellow bg:base)"
 staged = "+${count}"
 renamed = "»${count}"
-deleted = "[${count}](fg:red)"
+deleted = "[${count}](fg:red bg:base)"
 
 [cmd_duration]
 min_time = 1
