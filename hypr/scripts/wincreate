@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+msg() {
+  printf "\033[32;1m%s\033[m %s\n" "$PROMPT" "$*"
+}
+
+warn() {
+  >&2 printf "\033[33;1m%s \033[mwarning: %s\n" "$PROMPT" "$*"
+}
+
+die() {
+  >&2 printf "\033[31;1m%s \033[merror: %s\n" "$PROMPT" "$*"
+  exit 1
+}
+
+spawn_term() {
+  nohup kitty -e $@ &
+}
+
+spawn() {
+  spawn_term $@
+}
+
+spawn_session() {
+  wd="$1"
+  [[ -d "$wd" ]] || die "working directory does not exist."
+  shift
+  spawn tmux new-session -s "$(basename $wd)" -c "$wd" $@
+}
+
+add_window() {
+  tmux new-window -n "$1"
+}
+
+main() {
+  flag=${1#-}
+  shift
+
+  case $flag in
+    saku) spawn_session "$KITCHEN/pan/saku.git"
+      tmux rename-window nvim
+      add_window zsh
+      ;;
+    study) spawn_session "$KITCHEN/study/year2/blok2" $EDITOR ;;
+    botanic) spawn_session "$KITCHEN/botanic" $EDITOR ;;
+    *) die "command does not exist." ;;
+  esac
+}
+
+main $@

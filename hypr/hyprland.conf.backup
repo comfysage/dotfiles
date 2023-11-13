@@ -1,0 +1,109 @@
+# █▀▀ █▄░█ █░█   █░█ ▄▀█ █▀█
+# ██▄ █░▀█ ▀▄▀   ▀▄▀ █▀█ █▀▄
+
+source = ~/.config/hypr/variables.conf
+source = ~/.config/hypr/startup.conf
+source = ~/.config/hypr/env.conf
+source = ~/.config/hypr/workspaces.conf
+source = ~/.config/hypr/keybinds.conf
+source = ~/.config/hypr/windowrule.conf
+
+# █▀▄▀█ █▀█ █▄░█ █ ▀█▀ █▀█ █▀█
+# █░▀░█ █▄█ █░▀█ █ ░█░ █▄█ █▀▄
+
+monitor = ,preferred,auto,auto
+monitor = ,1920x1080@60,0x0,1
+
+env = XCURSOR_SIZE,16
+
+# █ █▄░█ █▀█ █░█ ▀█▀
+# █ █░▀█ █▀▀ █▄█ ░█░
+
+input {
+  kb_layout = us
+  follow_mouse = 0
+
+  kb_options = ctrl:nocaps
+  numlock_by_default = true
+
+  touchpad {
+    natural_scroll = true
+    scroll_factor = 0.1
+  }
+
+  sensitivity = 0.1 # -1.0 - 1.0, 0 means no modification.
+  force_no_accel = 1
+}
+
+device:logitech-g502-hero-gaming-mouse-keyboard-1 {
+  sensitivity = 0.8
+}
+
+device:syna32aa:00-06cb:ce17-touchpad {
+  natural_scroll = true
+  sensitivity = 3.0
+}
+
+# █▀▀ █▀▀ █▄░█ █▀▀ █▀█ ▄▀█ █░░
+# █▄█ ██▄ █░▀█ ██▄ █▀▄ █▀█ █▄▄
+
+general {
+  no_cursor_warps = 0
+}
+
+source = ~/.config/hypr/themes/evergarden.conf
+source = ~/.config/hypr/themes/nix.conf
+
+# █▀▄▀█ █ █▀ █▀▀
+# █░▀░█ █ ▄█ █▄▄
+
+misc {
+  disable_hyprland_logo = true
+  disable_splash_rendering = true
+  mouse_move_enables_dpms = true
+  vfr = true
+  vrr = 0
+  animate_manual_resizes = true
+  mouse_move_focuses_monitor = true
+  enable_swallow = true
+  swallow_regex = ^(wezterm)$
+}
+
+# ▄▀█ █▄░█ █ █▀▄▀█ ▄▀█ ▀█▀ █ █▀█ █▄░█
+# █▀█ █░▀█ █ █░▀░█ █▀█ ░█░ █ █▄█ █░▀█
+
+animations {
+  enabled = true
+
+  # █▄▄ █▀▀ ▀█ █ █▀▀ █▀█   █▀▀ █░█ █▀█ █░█ █▀▀
+  # █▄█ ██▄ █▄ █ ██▄ █▀▄   █▄▄ █▄█ █▀▄ ▀▄▀ ██▄
+  bezier = overshot, 0.05, 0.9, 0.1, 1.05
+  bezier = smoothOut, 0.36, 0, 0.66, -0.56
+  bezier = smoothIn, 0.25, 1, 0.5, 1
+
+  # ▄▀█ █▄░█ █ █▀▄▀█ ▄▀█ ▀█▀ █ █▀█ █▄░█
+  # █▀█ █░▀█ █ █░▀░█ █▀█ ░█░ █ █▄█ █░▀█
+  animation = windows, 1, 5, overshot, popin
+  animation = windowsOut, 1, 1, smoothOut, popin
+  animation = windowsMove, 1, 4, default
+  animation = border, 1, 10, default
+  animation = borderangle, 1, 8, default
+  animation = fade, 1, 10, smoothIn
+  animation = fadeDim, 1, 10, smoothIn
+  animation = workspaces, 1, 6, default
+}
+
+# █░░ ▄▀█ █▄█ █▀█ █░█ ▀█▀ █▀
+# █▄▄ █▀█ ░█░ █▄█ █▄█ ░█░ ▄█
+
+dwindle {
+  no_gaps_when_only = false
+  pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+  preserve_split = true # you probably want this
+}
+
+gestures {
+  workspace_swipe = true
+}
+
+# vim: shiftwidth=2

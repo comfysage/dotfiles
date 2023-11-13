@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+source "${XDG_DATA_HOME:-$HOME/.local/share}/wallctl/.wallpaperenv"
+
+# set variables
+BaseDir=`dirname $(realpath $0)`
+WallDir=`dirname "$WALL"`
+[[ -d "$WallDir" ]] || WallDir="$KITCHEN/pictures/$WallDir"
+RofiConf="$HOME/.config/rofi/wallselect.rasi"
+
+# override rofi border
+hypr_border=6
+elem_border=$(( hypr_border * 5 ))
+icon_border=$(( elem_border - 5 ))
+r_override="element {border-radius: ${elem_border}px;} element-icon {border-radius: ${icon_border}px;}"
+
+# launch rofi menu
+ThemeSel=$( ls $WallDir | while read line
+do
+  # thm=`echo $line | cut -d '|' -f 2`
+  # wal=`echo $line | awk -F '/' '{print $NF}'`
+  #echo $thm $wal
+  # echo -en "$thm\x00icon\x1f$CacheDir/${thm}/${wal}\n"
+  echo -en "$line\x00icon\x1f$WallDir/$line\n"
+done | rofi -dmenu -theme-str "${r_override}" -config $RofiConf)
+
+# apply theme
+if [ ! -z $ThemeSel ] ; then
+  ww "$WallDir/$ThemeSel"
+fi

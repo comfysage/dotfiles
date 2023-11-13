@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+notify() {
+  notify-send -u low "Screenshot saved" "saved as $1"
+}
+
+f_name=$(/mnt/d/bin/screenshot-name)
+
+main() {
+  mkdir -p "$(dirname $f_name)"
+
+  case "$1" in
+    full) 
+      grim "$f_name"
+      ;;
+    area)
+      grim -g "$(/mnt/d/bin/select-region)" "$f_name"
+      ;;
+  esac
+  notify "$f_name"
+}
+
+if [ -z "$1" ] || ([ "$1" != 'full' ] && [ "$1" != 'area' ]);
+then
+	echo "
+	Requires an argument:
+	area 	- Area screenshot
+	full 	- Fullscreen screenshot
+	Example:
+	./screenshot area
+	./screenshot full
+	"
+elif [ "$1" = 'full' ];
+then
+  main full
+elif [ "$1" = 'area' ];
+then
+  main area
+fi

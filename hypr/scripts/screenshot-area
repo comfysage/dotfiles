@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+grim -g "$(/mnt/d/bin/select-region)" "$(/mnt/d/bin/screenshot-name)"
