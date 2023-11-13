@@ -3,7 +3,7 @@
         "exec": "echo ; echo 󰆊 switch wallpaper",
         "on-click": "wallctl r",
         "on-click-right": "~/.config/hypr/scripts/wallselect",
-        "on-click-middle": "wallctl set",
+        "on-click-middle": "~/.config/rofi/wallpaper.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
