@@ -6,6 +6,7 @@ alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 _lime_source "aliases/base.zsh"
 _lime_source "aliases/util.zsh"
 _lime_source "aliases/tmux.zsh"
+_lime_source "aliases/nvim.zsh"
 
 alias rn="ranger"
 alias nnn="\\nnn -e -c -C -E -H -o -Q"
