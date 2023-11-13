@@ -678,7 +678,39 @@ schemes:
     indexed_colors:
       - { index: 16, color: '#FAB387' }
       - { index: 17, color: '#F5E0DC' }
+  aki: &aki
+    primary:
+      background: "#252531"
+      foreground: "#EBEBE3"
+    cursor:
+      text: "#252531"
+      cursor: "#EBEBE3"
+    vi_mode_cursor:
+      text: "#252531"
+      cursor: "#EBEBE3"
+    line_indicator:
+      foreground: None
+      background: None
+    selection:
+      text: CellForeground
+      background: "#252531"
+    normal:
+      black: "#252531"
+      red: "#CA797E"
+      green: "#A5C79F"
+      yellow: "#E6B87F"
+      blue: "#93B9BD"
+      magenta: "#ABADD0"
+      cyan: "#A1C3CC"
+      white: "#EBEBE3"
+    bright:
+      black: "#4B4C66"
+      red: "#CA797E"
+      green: "#9BC2B1"
+      yellow: "#E69E87"
+      blue: "#8CA1B8"
+      magenta: "#AD8DBD"
+      cyan: "#AF6672"
+      white: "#DFDFD5"
 
-
-
-colors: *gruvbox
+colors: *evergarden
