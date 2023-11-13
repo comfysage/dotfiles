@@ -13,6 +13,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
+export TERMINAL="${TERMINAL:-kitty}"
 export COLORTERM=truecolor
 export TERM="xterm-256color"
 # [[ -f /usr/bin/zsh ]] && export SHELL=$(which zsh)
