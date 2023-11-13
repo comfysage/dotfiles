@@ -5,6 +5,7 @@ plugins=(
   config
   gh
   git_fn
+  worktree
 )
 
 for plugin ($plugins); do
