@@ -1,8 +1,8 @@
 import:
   - /mnt/d/home/kitchen/config/alacritty/schemes.yml
 
-colors:
-  primary:
+# colors:
+#   primary:
     # background: '#0B0F10'
     # background: '#1d2021'
 
