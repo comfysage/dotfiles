@@ -6,7 +6,11 @@
 palette = "main"
 
 # Setups
-format="$directory$git_branch$git_status$character"
+format="""\
+$git_status$directory$git_branch\
+$rust$golang$lua\
+$container$character\
+"""
 add_newline = false
 
 # Other languages configurations:
@@ -15,13 +19,35 @@ cmake.disabled = true
 haskell.disabled = true
 python.disabled = true
 ruby.disabled = true
-rust.disabled = true
 perl.disabled = true
 package.disabled = true
-lua.disabled = true
 nodejs.disabled = true
 java.disabled = true
-golang.disabled = true
+
+[container]
+format='[$symbol \[$name\]]($style) '
+symbol="⬢"
+style="blue dimmed"
+
+[rust]
+format="[](bg:none fg:base)[with [$symbol](bg:8 $style)](bg:8 fg:15)[ ](bg:none fg:base)"
+symbol="rust"
+style="bright-yellow"
+
+[golang]
+format="[](bg:none fg:base)[with [$symbol](bg:8 $style)](bg:8 fg:15)[ ](bg:none fg:base)"
+symbol="go"
+style="cyan"
+
+[lua]
+format="[](bg:none fg:base)[with [$symbol](bg:8 $style)](bg:8 fg:15)[ ](bg:none fg:base)"
+symbol="lua"
+style="blue"
+
+[deno]
+format="[](bg:none fg:base)[with [$symbol](bg:8 $style)](bg:8 fg:15)[ ](bg:none fg:base)"
+symbol="deno "
+style="green"
 
 # Prompt symbols
 [character]
