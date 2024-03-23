@@ -8,7 +8,7 @@ _lime_source "aliases/util.zsh"
 _lime_source "aliases/tmux.zsh"
 _lime_source "aliases/nvim.zsh"
 
-alias rn="ranger"
+alias rn='$FILE_MANAGER'
 alias nnn="\\nnn -e -c -C -E -H -o -Q"
 alias np="ncmpcpp"
 alias vi='$EDITOR'
