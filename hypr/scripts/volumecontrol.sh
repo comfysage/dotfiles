@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-
 # define functions
 
 function print_error
@@ -18,22 +17,32 @@ EOF
 exit 1
 }
 
+function notify
+{
+  _action="$1"
+  ico="$2"
+  [[ -z "$ico" ]] || ico="-i $ico"
+  notify-send $ncolor -a "volctl" "volctl // $_action" "$nsink" $ico -r 91190 -t 600
+}
+
 function notify_vol
 {
     vol=`pamixer $srce --get-volume | cat`
-    angle="$(( (($vol+2)/5) * 5 ))"
-    ico="${icodir}/vol-${angle}.svg"
-    bar=$(seq -s "." $(($vol / 15)) | sed 's/[0-9]//g')
-    dunstify $ncolor "volctl" -a "$vol$bar" "$nsink" -i $ico -r 91190 -t 800
+    ico="${icodir}/unmuted-${dvce}.svg"
+    bar=$(seq -s "/" $(($vol / 15)) | sed 's/[0-9]//g')
+    # notify-send $ncolor -a "volctl" "volctl // $vol" "$nsink" -i $ico -r 91190
+    notify "$vol" "$ico"
 }
 
 function notify_mute
 {
     mute=`pamixer $srce --get-mute | cat`
     if [ "$mute" == "true" ] ; then
-        dunstify $ncolor "volctl" -a "muted" "$nsink" -i ${icodir}/muted-${dvce}.svg -r 91190 -t 800
+        # dunstify $ncolor -a "volctl" "volctl // muted" "$nsink" -i ${icodir}/muted-${dvce}.svg -r 91190
+        notify "muted" "${icodir}/muted-${dvce}.svg"
     else
-        dunstify $ncolor "volctl" -a "unmuted" "$nsink" -i ${icodir}/unmuted-${dvce}.svg -r 91190 -t 800
+        # dunstify $ncolor -a "volctl" "volctl // unmuted" "$nsink" -i ${icodir}/unmuted-${dvce}.svg -r 91190
+        notify "unmuted" "${icodir}/unmuted-${dvce}.svg"
     fi
 }
 

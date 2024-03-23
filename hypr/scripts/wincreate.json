@@ -1,0 +1,22 @@
+{
+  "saku": { "path": "$HOME/dev/saku.git", "editor": false },
+  "pkg": { "path": "$HOME/dev/pkg.git", "editor": false },
+
+  "study": { "path": "$KITCHEN/study/year2/blok2", "editor": true },
+  "botanic": { "path": "$KITCHEN/botanic", "editor": true },
+
+  "nix": { "path": "$HOME/.nix-config", "editor": true },
+  "nvim": { "path": "$HOME/.dots/nvim", "editor": false },
+  "lime": { "path": "$HOME/.dots/lime", "editor": true },
+
+  "chai": { "path": "$HOME/dev/chaivim.git", "editor": false },
+  "shelf": { "path": "$HOME/dev/shelf.nvim", "editor": false },
+
+  "evergarden": { "path": "$HOME/dev/evergarden", "editor": true },
+  "twilight-moon": { "path": "$HOME/dev/twilight-moon", "editor": true },
+  "aurora": { "path": "$HOME/dev/aurora", "editor": true },
+
+  "gtea": { "path": "$HOME/dev/gtea.git", "editor": true },
+
+  "rebos": { "path": "$HOME/.dots/rebos", "editor": true }
+}

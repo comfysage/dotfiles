@@ -11,13 +11,15 @@ main() {
 
   case "$1" in
     full) 
-      grim "$f_name"
+      grim "$f_name" || exit 1
       ;;
     area)
-      grim -g "$(/mnt/d/bin/select-region)" "$f_name"
+      grim -g "$(select-region)" "$f_name" || exit 1
       ;;
   esac
   notify "$f_name"
+
+  cat "$f_name" | wl-copy
 }
 
 if [ -z "$1" ] || ([ "$1" != 'full' ] && [ "$1" != 'area' ]);

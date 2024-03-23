@@ -14,22 +14,48 @@ die() {
 }
 
 spawn_term() {
-  nohup kitty -e $@ &
+  nohup kitty -e zsh -c "$@" &
 }
 
 spawn() {
-  spawn_term $@
+  args="$@"
+  spawn_term "$args" || die "could not spawn terminal."
 }
 
 spawn_session() {
-  wd="$1"
+  name="$1"
+  wd="$2"
   [[ -d "$wd" ]] || die "working directory does not exist."
-  shift
-  spawn tmux new-session -s "$(basename $wd)" -c "$wd" $@
+  shift&&shift
+  spawn tmux new-session -s "$name" -c "$wd" $@ || die "could not spawn session."
 }
 
 add_window() {
   tmux new-window -n "$1"
+}
+
+__open() {
+  flag=${1#-}
+  shift
+
+  item=$(cat ~/.config/hypr/scripts/wincreate.json | jq ".${flag}")
+  [[ $item == "null" ]] && die "session is not defined."
+  path=$(echo $item | jq ".path" | envsubst | tr -d '"')
+
+  cmd="${SHELL}"
+  _editor_b=$(echo $item | jq ".editor")
+  [[ $_editor_b == 'true' ]] && cmd="${EDITOR}"
+
+  spawn_session $flag "$path" "$cmd"
+}
+
+__list() {
+  r_override=''
+  r_config="$HOME/.config/rofi/select.rasi"
+  items=$(cat ~/.config/hypr/scripts/wincreate.json | jq 'keys' | head -n -1 | tail -n +2 | tr -d '"' | tr -d ',' | tr -d ' ')
+  item=$(echo "$items" | rofi -dmenu -p "󰆍  Tmux" -theme-str "${r_override}" -theme "${r_config}")
+
+  [[ -z "$item" ]] || __open "$item"
 }
 
 main() {
@@ -37,12 +63,8 @@ main() {
   shift
 
   case $flag in
-    saku) spawn_session "$KITCHEN/pan/saku.git"
-      tmux rename-window nvim
-      add_window zsh
-      ;;
-    study) spawn_session "$KITCHEN/study/year2/blok2" $EDITOR ;;
-    botanic) spawn_session "$KITCHEN/botanic" $EDITOR ;;
+    open) __open $flag ;;
+    list) __list ;;
     *) die "command does not exist." ;;
   esac
 }

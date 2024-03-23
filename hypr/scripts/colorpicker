@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TMPPCK=$(hyprpicker -a -n)
 TMPPST=$(wl-paste)
@@ -11,9 +11,9 @@ hyprpick() {
 
 check_dependencies() {
     ! command -v hyprpicker &>/dev/null &&
-        notify-send -u critical -a "Color Picker" xcolor-pick "gpick needs to be installed" && exit 1
+        notify-send -u critical -a "Color Picker" xcolor-pick "hyprpicker needs to be installed" && exit 1
 
-    ! command -v magick &>/dev/null &&
+    ! command -v convert &>/dev/null &&
         notify-send -u critical -a "Color Picker" xcolor-pick "imagemagick needs to be installed" && exit 1
 }
 

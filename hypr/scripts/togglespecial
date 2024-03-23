@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+[[ "$(hyprctl activewindow -j | jq ".workspace.name" )" == '"special"' ]] && hyprctl dispatch movetoworkspace +0 || hyprctl dispatch movetoworkspace special

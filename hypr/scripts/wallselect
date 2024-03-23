@@ -6,9 +6,13 @@ source "${XDG_DATA_HOME:-$HOME/.local/share}/wallctl/.wallpaperenv"
 BaseDir=`dirname $(realpath $0)`
 WallDir=`dirname "$WALL"`
 [[ -d "$WallDir" ]] || WallDir="$KITCHEN/pictures/$WallDir"
-RofiConf="$HOME/.config/rofi/wallselect.rasi"
+RofiConf="$HOME/.config/rofi/_wallselect.rasi"
 
 # override rofi border
+x_monres=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .width')
+monitor_scale=$(hyprctl -j monitors | jq '.[] | select (.focused == true) | .scale' | sed 's/\.//')
+x_monres=$(( x_monres * 17 / monitor_scale ))
+
 hypr_border=6
 elem_border=$(( hypr_border * 5 ))
 icon_border=$(( elem_border - 5 ))
@@ -26,5 +30,5 @@ done | rofi -dmenu -theme-str "${r_override}" -config $RofiConf)
 
 # apply theme
 if [ ! -z $ThemeSel ] ; then
-  ww "$WallDir/$ThemeSel"
+  wallctl set "$WallDir/$ThemeSel"
 fi
