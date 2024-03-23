@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export SHELL="$(grep "^$USER" /etc/passwd | grep -oE '(/[^:]*)+$')"
+[[ -f "$HOME/.config/user-dirs.dirs" ]] && . ~/.config/user-dirs.dirs
 
 source ~/.comfy_env
 
