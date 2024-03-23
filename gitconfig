@@ -2,22 +2,13 @@
 	editor = nvim
 	autocrlf = false
 [user]
-	email = 67917529+CrispyBaccoon@users.noreply.github.com
-	name = CrispyBaccoon
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-
+	email = 67917529+comfysage@users.noreply.github.com
+	name = comfysage
 [alias]
-	uncommit = reset HEAD~1
- hop = checkout -b
+	fpush = push --force-with-lease
 [init]
 	defaultBranch = mega
 [safe]
-	directory = /mnt/d/home/kitchen/pan/gruvbox
-	directory = /mnt/d/home/kitchen/config
-	directory = /mnt/d/home/kitchen/pan/stew
-	directory = /mnt/d/home/kitchen/pan/fantastic.vim
+	directory = *
+[pull]
+	rebase = true
