@@ -32,11 +32,9 @@ pager = "bat"
 fzf-preview = "bat -p --color always {-1}"
 
 [alias]
-# Shortcut to a command.
+list = "zk list --quiet -f oneline $@"
 ls = "zk list $@"
-
-# Default flags for an existing command.
-list = "zk list --quiet $@"
+wc = "zk list --sort word-count $@"
 
 search = "zk list -i $@"
 
