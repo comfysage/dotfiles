@@ -49,6 +49,10 @@ ZSH_HIGHLIGHT_STYLES[comment]='fg=gry'
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=yellow'
 
+# welcome message
+WELCOME_CMD="HAEL_GENDER='fem' hael -r"
+WELCOME_PIPE="kittysay -c 2 6"
+
 # Plugins
 plugins=(
  zsh-syntax-highlighting
@@ -56,7 +60,9 @@ plugins=(
  git
  tmux
  utils
+ quickcd
 )
+$initial_shell && plugins+=welcome-message
 
 DOTNET_CLI_TELEMETRY_OPTOUT=true
 
