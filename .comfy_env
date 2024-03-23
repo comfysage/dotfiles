@@ -50,6 +50,8 @@ export CONFIGPATH="$HOME/.dots"
 [[ -d "$KITCHEN/bin" ]] && PATH=$KITCHEN/bin:$PATH
 
 [[ -d "$HOME/llvm-project/build/bin" ]] && PATH="$PATH:$HOME/llvm-project/build/bin"
+export PATH="$PATH:$XDG_APP_HOME/llvm/bin"
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:$XDG_APP_HOME/llvm/share"
 
 [[ -f "$CONFIGPATH/make.conf" ]] && source "$CONFIGPATH/make.conf"
 
