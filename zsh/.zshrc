@@ -8,9 +8,9 @@ $DEBUG && . $CONFIGPATH/.zsh_doc
 $DEBUG && echo "-- configurating zsh"
 
 if $DEBUG; then
-  export ZSH="$KITCHEN/pan/lime"
+  export ZSH="$XDG_DEV_DIR/lime"
 else
-  export ZSH="$HOME/.hayashi/repo/lime"
+  export ZSH="$HOME/.saku/repo/lime"
 fi
 export ZSH_CUSTOM="$CONFIGPATH/lime"
 
