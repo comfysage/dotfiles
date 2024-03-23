@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export SHELL="$(grep "^$USER" /etc/passwd | grep -oE '(/\w*)+$')"
+export SHELL="$(grep "^$USER" /etc/passwd | grep -oE '(/[^:]*)+$')"
 
 source ~/.comfy_env
 
