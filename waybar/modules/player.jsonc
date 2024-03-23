@@ -1,0 +1,13 @@
+    "custom/player": {
+        "format": "{}",
+        "exec": "~/.config/hypr/scripts/playercontrol.sh update ; echo  current media",
+        "on-click": "sleep 0.1 && ~/.config/hypr/scripts/playercontrol.sh toggle",
+        "on-click-right": "sleep 0.1 && ~/.config/hypr/scripts/playercontrol.sh select",
+        "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/playercontrol.sh focus",
+        "on-scroll-up": "~/.config/hypr/scripts/playercontrol.sh volume i",
+        "on-scroll-down": "~/.config/hypr/scripts/playercontrol.sh volume d",
+        "restart-interval" : 8,
+        "tooltip": true,
+        "escape": true
+    },
+
