@@ -62,26 +62,32 @@ export PATH="$PATH:$XDG_APP_HOME/odin"
 
 # go
 
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export GOPATH="$XDG_APP_HOME/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
 # deno
 
-export DENO_INSTALL="/home/comfy/.deno"
+export DENO_INSTALL="$XDG_APP_HOME/deno"
 export PATH="$PATH:$DENO_INSTALL/bin"
 
 # cargo
 
-. "$HOME/.cargo/env"
+export RUSTUP_HOME="$XDG_APP_HOME/rustup"
+export CARGO_HOME="$XDG_APP_HOME/cargo"
+. "$CARGO_HOME/env"
 
 # hayashi
 
 # export PATH="$PATH:$HOME/.hayashi/pack/bin"
-eval "$($HOME/.hayashi/pack/bin/hayashi env)"
+[[ -x "$HOME/.hayashi/pack/bin/hayashi" ]] && eval "$($HOME/.hayashi/pack/bin/hayashi env)"
+[[ -x "$HOME/.saku/root/bin/sk" ]] && eval "$($HOME/.saku/root/bin/sk env)"
 
 # fzf
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+case $SHELL_NAME in
+  zsh) [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh ;;
+  bash) [ -f ~/.fzf.bash ] && source ~/.fzf.bash ;;
+esac
 
 # rbenv
 
