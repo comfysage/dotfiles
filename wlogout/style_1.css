@@ -5,10 +5,6 @@
 
 @import "main_style.css";
 
-window {
-    background-color: rgba(0,0,0,0.5);
-}
-
 button {
     color: black;
     background-color: @main-color;
@@ -37,72 +33,72 @@ button:hover {
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-button:hover#lock {
+button:hover:nth-child(1) {
     border-radius: 30px;
     margin : 54px 0px 54px 108px;
 }
 
-button:hover#logout {
+button:hover:nth-child(2) {
     border-radius: 30px;
     margin : 54px 0px 54px 0px;
     background-color: @level-warn;
 }
 
-button:hover#suspend {
+button:hover:nth-child(3) {
     border-radius: 30px;
     margin : 54px 0px 54px 0px;
     background-color: @level-health;
 }
 
-button:hover#shutdown {
+button:hover:nth-child(4) {
     border-radius: 30px;
     margin : 54px 0px 54px 0px;
     background-color: @level-shutdown;
 }
 
-button:hover#reboot {
+button:hover:nth-child(5) {
     border-radius: 30px;
     margin : 54px 0px 54px 0px;
     background-color: @level-shutdown;
 }
 
-button:hover#hibernate {
+button:hover:nth-child(6) {
     border-radius: 30px;
     margin : 54px 108px 54px 0px;
     background-color: @level-health;
 }
 
-#lock {
+button:nth-child(1) {
     background-image: image(url("/home/comfy/.config/wlogout/icons/lock_dark.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
     border-radius: 48px 0px 0px 48px;
     margin : 108px 0px 108px 108px;
 }
 
-#logout {
+button:nth-child(2) {
     background-image: image(url("/home/comfy/.config/wlogout/icons/logout_dark.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 108px 0px 108px 0px;
 }
 
-#suspend {
+button:nth-child(3) {
     background-image: image(url("/home/comfy/.config/wlogout/icons/suspend_dark.png"), url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 108px 0px 108px 0px;
 }
 
-#shutdown {
+button:nth-child(4) {
     background-image: image(url("/home/comfy/.config/wlogout/icons/shutdown_dark.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 108px 0px 108px 0px;
 }
 
-#reboot {
+button:nth-child(5) {
     background-image: image(url("/home/comfy/.config/wlogout/icons/reboot_dark.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 108px 0px 108px 0px;
 }
 
-#hibernate {
+button:nth-child(6) {
     background-image: image(url("/home/comfy/.config/wlogout/icons/hibernate_dark.png"), url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
     border-radius: 0px 48px 48px 0px;
     margin : 108px 108px 108px 0px;
