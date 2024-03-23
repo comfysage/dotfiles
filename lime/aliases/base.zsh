@@ -1,4 +1,4 @@
-alias list="exa -l --group-directories-first --no-user --no-time"
+alias list="eza -l --group-directories-first --no-user --no-time"
 alias ls="list -a"
 alias tree="list --tree --level 3"
 alias less="$PAGER"
