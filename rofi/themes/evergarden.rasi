@@ -1,51 +1,51 @@
 * {
 color-bg: #141b1f;
 color-fg: #D3C6AA;
-color0: #E67E80;
+color0: #141b1f;
+color8: #859289;
+color1: #E67E80;
 color8: #E67E80;
-color1: #A7C080;
+color2: #A7C080;
 color9: #A7C080;
-color2: #DBBC7F;
+color3: #DBBC7F;
 color10: #E69875;
-color3: #7FBBB3;
+color4: #7FBBB3;
 color11: #7FBBB3;
-color4: #D699B6;
+color5: #D699B6;
 color12: #D699B6;
-color5: #7A8478;
-color13: #7A8478;
 color6: #83C092;
 color14: #83C092;
-color7: #859289;
+color7: #D3C6AA;
 color15: #9DA9A0;
 }
 
 * {
   foreground: #D3C6AA;
   normal-foreground:           @foreground;
-  urgent-foreground:           #11111bff; //Crust
-  active-foreground:           #11111bff; //Crust
+  urgent-foreground:           @foreground;
+  active-foreground:           @foreground;
 
   alternate-normal-foreground: @normal-foreground;
   alternate-urgent-foreground: @urgent-foreground;
   alternate-active-foreground: @active-foreground;
 
-  selected-normal-foreground:  #11111bff; //Crust
-  selected-urgent-foreground:  #11111bff; //Crust
-  selected-active-foreground:  #11111bff; //Crust
+  selected-normal-foreground:  @background;
+  selected-urgent-foreground:  @background;
+  selected-active-foreground:  @background;
 
-  background: #273232;
-  background-alt: #273232;
+  background: @color-bg;
+  background-alt: @color-bg;
   normal-background:           @background;
-  urgent-background:           #eba0accc; //Maroon
-  active-background:           #94e2d5cc; //Teal
+  urgent-background:           @color1;
+  active-background:           @color10;
 
-  alternate-normal-background: #f5c2e7ff;
+  alternate-normal-background: @normal-background;
   alternate-urgent-background: @urgent-background;
   alternate-active-background: @active-background;
 
-  selected-normal-background:  @color10; //Lavender
-  selected-urgent-background:  #94e2d5; //Teal
-  selected-active-background:  @color7; //Maroon
+  selected-normal-background:  @color10;
+  selected-urgent-background:  @color1;
+  selected-active-background:  @color7;
 
 	separatorcolor:              transparent;
   border-color:                @color9;
