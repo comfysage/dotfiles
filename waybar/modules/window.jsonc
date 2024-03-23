@@ -12,7 +12,8 @@
             "(.*) — Dolphin": "$1 󰉋",
             "(.*) - Thunar": "$1 󰉋",
             "(.*)Spotify": "Spotify 󰓇",
-            "(.*)Steam": "Steam 󰓓"
+            "(.*)Steam": "Steam 󰓓",
+            "(.*) - (\\w*) - Obsidian v\\d+\\.\\d+\\.\\d+": "$2  $1"
         }
     },
 
