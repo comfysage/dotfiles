@@ -22,6 +22,7 @@ export TERM="xterm-256color"
 [[ "${0##*/}" == "bash" || "${0##*/}" == "zsh" ]] && export SHELL="$(which $0)"
 export SHELL_NAME="${SHELL##*/}"
 export player="mpd"
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 
 PATH=/usr/local/bin:$PATH
 
