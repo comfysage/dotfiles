@@ -2,21 +2,12 @@
 
 /*****----- Configuration -----*****/
 configuration {
-  modi:                       "drun,run,filebrowser";
+  modi:                   "drun,run,filebrowser";
   fixed-num-lines:        true;
   show-icons:             true;
   /* sidebar-mode:           false; */
   /* scroll-method:          1; */
-  window-format:          "[{w}] | {c} | {t}";
-  /* window-format:              "{w} · {c} · {t}"; */
   /* combi-hide-mode-prefix: false; */
-  display-filebrowser:    "  Files";
-  display-window:         "  Windows";
-  display-windowcd:       "";
-  display-run:            "  Run";
-  display-ssh:            "";
-  display-drun:           "  Apps";
-  display-combi:          "";
   drun-display-format:    "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 }
 
@@ -24,13 +15,25 @@ configuration {
   background-color:            @background;
 }
 
-/*****----- Main Window -----*****/
 window {
+  fullscreen: true;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-color: rgba(0,0,0,0.2);
+
+  border: 0px;
+  border-radius: 0px;
+  border-color: none;
+}
+
+/*****----- Main Window -----*****/
+mainbox {
   /* properties for window widget */
   transparency:                "real";
   location:                    center;
   anchor:                      center;
-  fullscreen:                  false;
+  /* fullscreen:                  false; */
   width:                       520px;
   /* height:                      538px; */
   x-offset:                    0px;
@@ -53,11 +56,12 @@ window {
 mainbox {
   spacing: 10px;
   padding: 25px;
-
-  border: 0px;
-  border-color: @border-color;
-
-  background-color:            transparent;
+  margin: 260px 700px;
+  /**/
+  /* border: 0px; */
+  /* border-color: @border-color; */
+  /**/
+  /* background-color:            transparent; */
 
   children:                    [ "inputbar", "listview", "mode-switcher" ];
 }
@@ -148,6 +152,8 @@ listview {
   border-radius: 0px;
   border-color: @foreground;
 
+  background-color: transparent;
+
   cursor:                      "default";
 }
 scrollbar {
@@ -171,7 +177,7 @@ element {
   /* padding:                     5px 10px; */
   /* border-radius:               5px; */
   /* border-color:                @border; */
-  /* background-color:            transparent; */
+  background-color:            transparent;
   /* text-color:                  @foreground-colour; */
   border:                      0px solid;
 
@@ -209,15 +215,15 @@ element-text {
 }
 
 element normal.normal {
-  background-color: @background;
+  background-color: transparent;
   text-color: @foreground;
 }
 element normal.urgent {
-  background-color: @background;
+  background-color: transparent;
   text-color: @selected-urgent-background;
 }
 element normal.active {
-  background-color: @background;
+  background-color: transparent;
   text-color: @selected-active-background;
 }
 element selected.normal {
@@ -225,23 +231,23 @@ element selected.normal {
   text-color: @background;
 }
 element selected.urgent {
-  background-color: @background;
+  background-color: transparent;
   text-color: @selected-urgent-background;
 }
 element selected.active {
-  background-color: @background;
+  background-color: transparent;
   text-color: @selected-normal-background;
 }
 element alternate.normal {
-  background-color: @background;
+  background-color: transparent;
   text-color: @foreground;
 }
 element alternate.urgent {
-  background-color: @background;
+  background-color: transparent;
   text-color: @foreground;
 }
 element alternate.active {
-  background-color: @background;
+  background-color: transparent;
   text-color: @foreground;
 }
 

@@ -1,12 +1,26 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  drun-display-format: "{icon} {name}";
-  /* font: "JetBrainsMono NF"; */
-  font: "JetBrainsMono NF 11";
-  show-icons: true;
-  icon-theme: "Papirus";
+  display-filebrowser:    "  Files";
+  display-window:         "  Windows";
+  display-windowcd:       "";
+  display-run:            "  Run";
+  display-ssh:            "";
+  display-drun:           "  Apps";
+  display-combi:          "";
+  drun-display-format:    "{icon} {name}";
+  font:                   "JetBrainsMono NF 11";
+  font-family:            "FiraCode";
+  font-size:              11px;
+  show-icons:             true;
+  icon-theme:             "Papirus";
   click-to-exit:          true;
+  window-format:          "[{w}] | {c} | {t}";
+  /* window-format:              "{w} · {c} · {t}"; */
+}
+
+* {
+  font:                   "JetBrainsMono NF 11";
+  font-family:            "FiraCode";
+  font-size:              11px;
 }
 
 @theme "~/.config/rofi/themes/theme"

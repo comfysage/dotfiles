@@ -1,5 +1,2 @@
 @import "~/.config/rofi/select.rasi"
 
-mode-switcher {
-  enabled: true;
-}
