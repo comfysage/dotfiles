@@ -7,7 +7,7 @@ palette = "main"
 
 # Setups
 format="""\
-$git_status$directory$git_branch\
+${custom.git_remote}$git_status$directory$git_branch\
 $rust$golang$lua\
 $container$character\
 """
@@ -23,6 +23,14 @@ perl.disabled = true
 package.disabled = true
 nodejs.disabled = true
 java.disabled = true
+
+[custom.git_remote]
+description = "show name of the git remote (works for github and gitlab)"
+command = "basename $(git remote get-url origin) .git"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null"
+shell = ["sh"]
+format = "[](bg:none fg:base)[[$output](bg:8 $style)](bg:8 fg:15)[ ](bg:none fg:base)"
+style = "white"
 
 [container]
 format='[$symbol \[$name\]]($style) '
