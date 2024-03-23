@@ -17,7 +17,7 @@ export ZSH_CUSTOM="$CONFIGPATH/lime"
 ZSH_THEME="aki"
 ZSH_THEME_FILE="$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme"
 
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 $DEBUG && echo "-- configurating omz"
 
