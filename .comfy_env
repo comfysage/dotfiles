@@ -43,8 +43,8 @@ export HISTFILE="$XDG_STATE_HOME"/zsh/history
 # kitchen
 # =======
 
-export KITCHEN="/mnt/d/kitchen"
-export CONFIGPATH="$KITCHEN/config"
+export KITCHEN="/home/kitchen"
+export CONFIGPATH="$HOME/.dots"
 
 [[ -d "$KITCHEN/bin" ]] && PATH=$KITCHEN/bin:$PATH
 
