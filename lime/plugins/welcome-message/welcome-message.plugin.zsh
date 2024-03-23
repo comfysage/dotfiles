@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+WELCOME_CMD_DEFAULT='echo "hi, $USER"'
+WELCOME_PIPE_DEFAULT='echo'
+WELCOME_CMD="${WELCOME_CMD:-$WELCOME_CMD_DEFAULT}"
+WELCOME_PIPE="${WELCOME_PIPE:-$WELCOME_PIPE_DEFAULT}"
+
+message="$(eval $WELCOME_CMD)"
+
+eval "$WELCOME_PIPE \"$message\""
