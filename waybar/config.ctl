@@ -1,2 +1,3 @@
-0|36|bottom|( clock ) ( wlr/taskbar )|( hyprland/workspaces )|( network bluetooth ) ( battery backlight pulseaudio ) ( custom/wallchange custom/wbar custom/cliphist custom/power )
-1|28|top|( clock ) ( hyprland/window ) |( hyprland/workspaces )|( network bluetooth ) ( battery backlight pulseaudio ) ( custom/wallchange custom/wbar custom/cliphist ) ( custom/power )
+0|36|||bottom|( clock ) ( wlr/taskbar )|( hyprland/workspaces )|( custom/player ) ( network bluetooth ) ( battery backlight pulseaudio ) ( custom/wallchange custom/wbar custom/cliphist )( tray custom/power )
+0|28|||top|( clock ) ( hyprland/window ) |( hyprland/workspaces )|( custom/player ) ( network bluetooth ) ( battery backlight pulseaudio ) ( custom/wallchange custom/wbar custom/cliphist ) ( tray custom/power )
+1|32|||top|{ clock } ( hyprland/window ) |( hyprland/workspaces )|( custom/player ) ( pulseaudio pulseaudio#microphone bluetooth ) ( network ) ( backlight ) ( battery ) { custom/wallchange custom/wbar custom/cliphist } { tray custom/power }

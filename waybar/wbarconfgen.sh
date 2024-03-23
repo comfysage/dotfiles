@@ -43,7 +43,7 @@ fi
 # overwrite config from header module
 
 export set_sysname=`hostnamectl hostname`
-export w_position=`grep '^1|' $conf_ctl | cut -d '|' -f 3`
+export w_position=`grep '^1|' $conf_ctl | cut -d '|' -f 5`
 
 export w_height=`grep '^1|' $conf_ctl | cut -d '|' -f 2`
 if [ -z $w_height ] ; then
@@ -74,6 +74,7 @@ gen_mod()
     local mod=""
 
     mod=`grep '^1|' $conf_ctl | cut -d '|' -f ${col}`
+    echo "[$pos] using $mod"
     mod="${mod//(/"custom/l_end"}"
     mod="${mod//)/"custom/r_end"}"
     mod="${mod//[/"custom/sl_end"}"
@@ -90,9 +91,9 @@ gen_mod()
 # write positions for modules
 
 echo -e "\n\n// positions generated based on config.ctl //\n" >> $conf_file
-gen_mod left 4
-gen_mod center 5
-gen_mod right 6
+gen_mod left 6
+gen_mod center 7
+gen_mod right 8
 
 
 # copy modules/*.jsonc to the config
