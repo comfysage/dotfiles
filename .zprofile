@@ -1,4 +1,1 @@
-emulate sh -c '. ~/.profile'
-source ~/.profile
-
-/mnt/d/home/kitchen/config/tmux/sessions.sh &
+[[ -f "$HOME/.profile" ]] && source "$HOME/.profile"
