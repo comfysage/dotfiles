@@ -1,0 +1,6 @@
+--pager=less
+--color=always
+--style=changes
+--theme=base16
+
+# vim: ft=cfg
