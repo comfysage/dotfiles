@@ -19,7 +19,8 @@ export XDG_APP_HOME=/opt
 export TERMINAL="${TERMINAL:-kitty}"
 export COLORTERM=truecolor
 export TERM="xterm-256color"
-# [[ -f /usr/bin/zsh ]] && export SHELL=$(which zsh)
+[[ "${0##*/}" == "bash" || "${0##*/}" == "zsh" ]] && export SHELL="$(which $0)"
+export SHELL_NAME="${SHELL##*/}"
 export player="mpd"
 
 PATH=/usr/local/bin:$PATH
