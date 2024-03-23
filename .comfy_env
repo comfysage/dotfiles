@@ -12,6 +12,9 @@ export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/comfy/.local/share/flatpak/exports/share"
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_APP_HOME=/opt
 
 export TERMINAL="${TERMINAL:-kitty}"
 export COLORTERM=truecolor
