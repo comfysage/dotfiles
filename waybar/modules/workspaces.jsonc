@@ -1,4 +1,4 @@
-    "hyprland/workspaces": {
+    "wlr/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
