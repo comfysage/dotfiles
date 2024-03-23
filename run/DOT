@@ -17,6 +17,8 @@ hayashi add ohmyzsh
 echo "> CLONING DOTFILES <"
 cd
 git clone https://github.com/crispybaccoon/dotfiles.git ~/.link
+cd ~/.link && git submodule update --init --recursive
+cd ..
 
 # setup niru
 ln -s ~/.link/niru.yaml ~/.niru
