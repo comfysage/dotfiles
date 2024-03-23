@@ -1,12 +1,14 @@
 local wezterm = require 'wezterm'
 
+local icons_font = { family = 'Symbols Nerd Font Mono', scale = 1.1 }
+
 local function font_with_fallback(name, params)
-	local names = { name, 'JetBrainsMono Nerd Font', 'Source Code Pro' }
+	local names = { name, icons_font, 'JetBrainsMono Nerd Font', 'Source Code Pro' }
 	return wezterm.font_with_fallback(names, params)
 end
 
 local font_name = { family = 'Claire Mono', scale = 1.1 }
-font_name = 'JetBrainsMono Nerd Font'
+font_name = { family = 'Maple Mono', scale = 1.1 }
 
 local config = {}
 
@@ -17,10 +19,10 @@ end
 config.check_for_updates = false
 config.show_update_window = false
 
-config.color_scheme = 'aki'
+config.color_scheme = 'evergarden'
 
 -- OpenGL for GPU acceleration, Software for CPU
-config.front_end = 'OpenGL'
+config.front_end = 'WebGpu'
 
 -- Font config
 config.font = font_with_fallback(font_name)
