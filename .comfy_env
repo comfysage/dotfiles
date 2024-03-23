@@ -53,6 +53,8 @@ export CONFIGPATH="$HOME/.dots"
 export PATH="$PATH:$XDG_APP_HOME/llvm/bin"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$XDG_APP_HOME/llvm/share"
 
+export PATH="$PATH:$XDG_APP_HOME/odin"
+
 [[ -f "$CONFIGPATH/make.conf" ]] && source "$CONFIGPATH/make.conf"
 
 # applications
